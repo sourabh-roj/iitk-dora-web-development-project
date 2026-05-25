@@ -71,7 +71,7 @@
             </div>
         </div>
     </main>
-    <script src="../assets/js/csea.js"></script>
+    <script src="../assets/JS/csea.js"></script>
 </body>
 </html>
 <?php include('../footer.php')?>

@@ -1,4 +1,4 @@
-    <?php include('../header.php')?>
+<?php include('../header.php')?>
 
 <body>
     <main class="container">
@@ -79,5 +79,5 @@
             </div>
         </div>
     </main>
-    <script src="../assets/js/yaa.js"></script>
+    <script src="../assets/JS/yaa.js"></script>
 <?php include('../footer.php')?>

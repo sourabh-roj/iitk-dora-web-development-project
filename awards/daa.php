@@ -78,7 +78,7 @@
             </div>
         </div>
     </main>
-    <script src="../assets/js/daa.js"></script>
+    <script src="../assets/JS/daa.js"></script>
 </body>
 </html>
 <?php include('../footer.php')?>
