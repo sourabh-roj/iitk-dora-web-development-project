@@ -108,5 +108,5 @@
             </div>
         </div>
     </main>
-    <script src="\DORA\Internship\assets\js\skd.js"></script>
+    <script src="/DORA/Internship/assets/js/skd.js"></script>
     <?php include("../footer.php"); ?>

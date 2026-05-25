@@ -71,7 +71,7 @@
             </div>
         </div>
     </main>
-    <script src="\DORA\Internship\assets\js\csea.js"></script>
+    <script src="/DORA/Internship/assets/js/csea.js"></script>
 </body>
 </html>
 <?php include('../footer.php')?>

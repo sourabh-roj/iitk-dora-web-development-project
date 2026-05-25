@@ -20,9 +20,9 @@
   <div class="slider-container">
     <div class="slider">
       <div class="slides">
-        <img src="assets\imag\home\slider\congratulations-2025.png" alt="Congratulations Image">
-        <img src="assets\imag\home\slider\slider3.png" alt="slider image 2 ">
-        <img src="assets\imag\home\slider\parwa-1.jpg" alt="Slider Image 1">
+        <img src="assets/imag/home/slider/congratulations-2025.png" alt="Congratulations Image">
+        <img src="assets/imag/home/slider/slider3.png" alt="slider image 2 ">
+        <img src="assets/imag/home/slider/parwa-1.jpg" alt="Slider Image 1">
         </div>
       <div class="slider-dots"></div>
     </div>
@@ -98,7 +98,7 @@
     <div class="news-marquee">
       <div class="news-marquee-track" id="newsMarqueeTrack">
         <div class="news-item">
-            <img src="assets\imag\home\news\news6.jpg" alt="News Image 6">
+            <img src="assets/imag/home/news/news6.jpg" alt="News Image 6">
             <div>
                 <div class="news-text">
                    We are proud to share that Prof. Prakash Panangaden (MSc5/PHY/1975), Professor Emeritus at McGill University and an esteemed alumnus of IIT Kanpur, has been elected as a Fellow of the Royal Society, UK - one of the most prestigious recognitions in the world of science.
@@ -107,7 +107,7 @@
             </div>
         </div>
         <div class="news-item">
-            <img src="assets\imag\home\news\news7.png" alt="News Image 7">
+            <img src="assets/imag/home/news/news7.png" alt="News Image 7">
             <div>
                 <div class="news-text">
                    A huge congratulations to Prof. Ashutosh Sharma on being conferred with the Padma Shri! The entire IIT Kanpur community takes immense pride in this well-deserved honour, celebrating his outstanding contributions to science, engineering, and innovation.
@@ -116,7 +116,7 @@
             </div>
         </div>
         <div class="news-item">
-            <img src="assets\imag\home\news\news1.jpg" alt="News Image 1">
+            <img src="assets/imag/home/news/news1.jpg" alt="News Image 1">
             <div>
                 <div class="news-text">
                     The IITKarvaan evening in Toronto was a heartwarming celebration of memories, milestones, and meaningful conversations. From shared laughter to thought-provoking discussions about the future of IIT Kanpur, the event reflected the strength and unity of our global alumni network.
@@ -125,7 +125,7 @@
             </div>
         </div>
         <div class="news-item">
-            <img src="assets\imag\home\news\news2.jpg" alt="News Image 2">
+            <img src="assets/imag/home/news/news2.jpg" alt="News Image 2">
             <div>
                 <div class="news-text">
                     Abhinandan '25 | An evening to Remember
@@ -135,7 +135,7 @@
             </div>
         </div>
         <div class="news-item">
-            <img src="assets\imag\home\news\news3.jpg" alt="News Image 3">
+            <img src="assets/imag/home/news/news3.jpg" alt="News Image 3">
             <div>
                 <div class="news-text">
                     We are proud to share that Dr. Ajay Kumar, a distinguished alumnus of IIT Kanpur and former Defence Secretary of India, has been appointed as the Chairman of the Union Public Service Commission (UPSC).

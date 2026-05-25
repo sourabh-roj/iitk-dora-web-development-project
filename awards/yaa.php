@@ -79,5 +79,5 @@
             </div>
         </div>
     </main>
-    <script src="\DORA\Internship\assets\js\yaa.js"></script>
+    <script src="/DORA/Internship/assets/js/yaa.js"></script>
 <?php include('../footer.php')?>

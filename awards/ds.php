@@ -85,5 +85,5 @@
             </div>
         </div>
     </main>
-    <script src="\DORA\Internship\assets\js\ds.js"></script>
-    <?php include('..\footer.php') ?>
+    <script src="/DORA/Internship/assets/js/ds.js"></script>
+    <?php include('../footer.php') ?>
