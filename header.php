@@ -203,15 +203,15 @@ function isNavActive($section, $active_section) {
                                     <div class="row g-0">
                                         <div class="col-lg-6 mega-col">
                                             <li><h6 class="dropdown-header text-warning">Reunions</h6></li>
-                                            <li><a class="dropdown-item" href="\DORA\Internship\ne\reunion2425.php">Reunion 2024-25</a></li>
-                                            <li><a class="dropdown-item" href="\DORA\Internship\ne\reunion2023-24.php">Reunion 2023-24</a></li>
-                                            <li><a class="dropdown-item" href="\DORA\Internship\ne\reunion2223.php">Reunion 2022-23</a></li>
+                                            <li><a class="dropdown-item" href="/DORA/Internship/ne/reunion2425.php">Reunion 2024-25</a></li>
+                                            <li><a class="dropdown-item" href="/DORA/Internship/ne/reunion2023-24.php">Reunion 2023-24</a></li>
+                                            <li><a class="dropdown-item" href="/DORA/Internship/ne/reunion2223.php">Reunion 2022-23</a></li>
                                         </div>
                                         
                                         <div class="col-lg-6 mega-col">
                                             <li><h6 class="dropdown-header text-warning">News</h6></li>
-                                            <li><a class="dropdown-item" href="\DORA\Internship\ne\institute_news.php">Institute News</a></li>
-                                            <li><a class="dropdown-item" href="\DORA\Internship\ne\alum-news.php">Alumni News</a></li>
+                                            <li><a class="dropdown-item" href="/DORA/Internship/ne/institute_news.php">Institute News</a></li>
+                                            <li><a class="dropdown-item" href="/DORA/Internship/ne/alum-news.php">Alumni News</a></li>
                                             <li><a class="dropdown-item" href="/ne/obituaries.php">Obituaries</a></li>
                                         </div>
                                     </div>
