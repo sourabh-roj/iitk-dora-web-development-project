@@ -9,55 +9,55 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
 // Map pages to their specific CSS files
 $css_files = array(
-    'teams.php' => '/dora/internship/assets/CSS/teams.css',
-    'news.php' => '/dora/internship/assets/CSS/news.css',
-    'df.php' => '/dora/internship/assets/CSS/df.css',
-    'index.php' => '/dora/internship/assets/CSS/style.css',
-    'notablealumni.php' => '/dora/internship/assets/CSS/notablealumni.css',
-    'awards_honours.php' => '/dora/internship/assets/CSS/awards_honours.css',
-    'career.php' => '/dora/internship/assets/CSS/career.css',
-    'utpal.php' => '/dora/internship/assets/CSS/utpal.css',
-    'spark.php' => '/dora/internship/assets/CSS/spark.css',
-    'annualreport.php' => '/dora/internship/assets/CSS/annualreport.css',
-    'newsletter.php' => '/dora/internship/assets/CSS/newsletter.css',
-    'previousnews.php' => '/dora/internship/assets/CSS/previousnews.css',
-    'facultyinitiative.php' => '/dora/internship/assets/CSS/facultyinitiative.css',
-    'marshal-harjindar.php' => '/dora/internship/assets/CSS/marshal-harjindar.css',
-    'batch-1993.php' => '/dora/internship/assets/CSS/batch-1993.css',
-    'distinguished-series.php' => '/dora/internship/assets/CSS/distinguished.css',
-    'subbarao.php' => '/dora/internship/assets/CSS/subbarao.css',
-    'pd.php' => '/dora/internship/assets/CSS/pd.css',
-    'shiksha-sopan.php' => '/dora/internship/assets/CSS/shiksha-sopan.css',
-    'prayas.php' => '/dora/internship/assets/CSS/prayas.css',
-    'rsk.php' => '/dora/internship/assets/CSS/rsk.css',
-    'opportunity-school.php' => '/dora/internship/assets/CSS/opportunity-school.css',
-    'oi.php' => '/dora/internship/assets/CSS/oi.css',
-    'ShivaniCentre.php' => '/dora/internship/assets/CSS/ShivaniCentre.css',
-    'c1.php' => '/dora/internship/assets/CSS/c1.css',
-    'mehta-center.php' => '/dora/internship/assets/CSS/mehta-center.css',
-    'ns.php' => '/dora/internship/assets/CSS/school-pages.css',
-    'campus.php' => '/dora/internship/assets/CSS/school-pages.css',
-    'daa.php' => '/dora/internship/assets/CSS/daa.css',
-    'skd.php' => '/dora/internship/assets/CSS/skd.css',
-    'ds.php' => '/dora/internship/assets/CSS/ds.css',
-    'yaa.php' => '/dora/internship/assets/CSS/yaa.css',
-    'csea.php' => '/dora/internship/assets/CSS/csea.css',
-    'scholarship.php' => '/dora/internship/assets/CSS/scholarship.css',
-    'scholarship-criteria.php' => '/dora/internship/assets/CSS/scholarship-criteria.css',
-    'List-of-Recipients-2022-23.php' => '/dora/internship/assets/CSS/list-of-Recipients-2022-23.css',
-    'List-of-Recipients-2021-22.php' => '/dora/internship/assets/CSS/list-of-Recipients-2022-23.css',
-    'List-of-Recipients-2020-21.php' => '/dora/internship/assets/CSS/list-of-Recipients-2022-23.css',
-    'ongoing-student-award.php' => '/dora/internship/assets/CSS/list-of-Recipients-2022-23.css',
-    'awards_initiative.php' => '/dora/internship/assets/CSS/award_initiative.css',
-    'academic-excellence-award-2022.php' => '/dora/internship/assets/CSS/list-of-Recipients-2022-23.css',
-    'gangwaal.php' => '/dora/internship/assets/CSS/gangwaal.css',
-    'gym.php' => '/dora/internship/assets/CSS/gym.css',
-    'obituaries.php' => '/dora/internship/assets/CSS/obituaries.css',
-    'institute_news.php' => '/dora/internship/assets/CSS/i_n.css' ,
-    'reunion2023-24.php' => '/DORA/Internship/assets/CSS/reunion-2324.css' , 
-    'reunion2223.php' => '/DORA/Internship/assets/CSS/reunion2223.css' , 
-    'reunion2425.php' => '/DORA/Internship/assets/CSS/reunion2425.css',
-    'alum-news.php' => '/DORA/Internship/assets/CSS/alum-news.css'
+    'teams.php' => '/assets/CSS/teams.css',
+    'news.php' => '/assets/CSS/news.css',
+    'df.php' => '/assets/CSS/df.css',
+    'index.php' => '/assets/CSS/style.css',
+    'notablealumni.php' => '/assets/CSS/notablealumni.css',
+    'awards_honours.php' => '/assets/CSS/awards_honours.css',
+    'career.php' => '/assets/CSS/career.css',
+    'utpal.php' => '/assets/CSS/utpal.css',
+    'spark.php' => '/assets/CSS/spark.css',
+    'annualreport.php' => '/assets/CSS/annualreport.css',
+    'newsletter.php' => '/assets/CSS/newsletter.css',
+    'previousnews.php' => '/assets/CSS/previousnews.css',
+    'facultyinitiative.php' => '/assets/CSS/facultyinitiative.css',
+    'marshal-harjindar.php' => '/assets/CSS/marshal-harjindar.css',
+    'batch-1993.php' => '/assets/CSS/batch-1993.css',
+    'distinguished-series.php' => '/assets/CSS/distinguished.css',
+    'subbarao.php' => '/assets/CSS/subbarao.css',
+    'pd.php' => '/assets/CSS/pd.css',
+    'shiksha-sopan.php' => '/assets/CSS/shiksha-sopan.css',
+    'prayas.php' => '/assets/CSS/prayas.css',
+    'rsk.php' => '/assets/CSS/rsk.css',
+    'opportunity-school.php' => '/assets/CSS/opportunity-school.css',
+    'oi.php' => '/assets/CSS/oi.css',
+    'ShivaniCentre.php' => '/assets/CSS/ShivaniCentre.css',
+    'c1.php' => '/assets/CSS/c1.css',
+    'mehta-center.php' => '/assets/CSS/mehta-center.css',
+    'ns.php' => '/assets/CSS/school-pages.css',
+    'campus.php' => '/assets/CSS/school-pages.css',
+    'daa.php' => '/assets/CSS/daa.css',
+    'skd.php' => '/assets/CSS/skd.css',
+    'ds.php' => '/assets/CSS/ds.css',
+    'yaa.php' => '/assets/CSS/yaa.css',
+    'csea.php' => '/assets/CSS/csea.css',
+    'scholarship.php' => '/assets/CSS/scholarship.css',
+    'scholarship-criteria.php' => '/assets/CSS/scholarship-criteria.css',
+    'List-of-Recipients-2022-23.php' => '/assets/CSS/list-of-Recipients-2022-23.css',
+    'List-of-Recipients-2021-22.php' => '/assets/CSS/list-of-Recipients-2022-23.css',
+    'List-of-Recipients-2020-21.php' => '/assets/CSS/list-of-Recipients-2022-23.css',
+    'ongoing-student-award.php' => '/assets/CSS/list-of-Recipients-2022-23.css',
+    'awards_initiative.php' => '/assets/CSS/award_initiative.css',
+    'academic-excellence-award-2022.php' => '/assets/CSS/list-of-Recipients-2022-23.css',
+    'gangwaal.php' => '/assets/CSS/gangwaal.css',
+    'gym.php' => '/assets/CSS/gym.css',
+    'obituaries.php' => '/assets/CSS/obituaries.css',
+    'institute_news.php' => '/assets/CSS/i_n.css' ,
+    'reunion2023-24.php' => '/assets/CSS/reunion-2324.css' , 
+    'reunion2223.php' => '/assets/CSS/reunion2223.css' , 
+    'reunion2425.php' => '/assets/CSS/reunion2425.css',
+    'alum-news.php' => '/assets/CSS/alum-news.css'
 
 
 );
@@ -145,9 +145,9 @@ function isNavActive($section, $active_section) {
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Common CSS for all pages -->
-    <link rel="stylesheet" href="/dora/internship/assets/CSS/header.css">
-    <link rel="stylesheet" href="/dora/internship/assets/CSS/footer.css">
-    <link rel="stylesheet" href="/dora/internship/assets/CSS/ssb.css">
+    <link rel="stylesheet" href="/assets/CSS/header.css">
+    <link rel="stylesheet" href="/assets/CSS/footer.css">
+    <link rel="stylesheet" href="/assets/CSS/ssb.css">
     
     <!-- Page-specific CSS -->
     <?php
@@ -163,8 +163,8 @@ function isNavActive($section, $active_section) {
             <div class="container-fluid">
                 <div class="header-content d-flex justify-content-between align-items-center">
                     <div class="d-flex align-items-center">
-                        <a href="/dora/internship/index.php">
-                            <img src="/dora/internship/assets/imag/home/logo.png" alt="IITK Logo" class="logo me-3">
+                        <a href="/index.php">
+                            <img src="/assets/imag/home/logo.png" alt="IITK Logo" class="logo me-3">
                         </a>
                         <div class="header-text">
                             <h1>Office of Resources and Alumni</h1>
@@ -187,14 +187,14 @@ function isNavActive($section, $active_section) {
                     </button>
                     
                     <!-- Sticky Logo Brand (hidden by default, shown when sticky) -->
-                    <a class="navbar-brand" href="/dora/internship/index.php">
-                        <img src="/dora/internship/publications/blogs/logo(3).png" alt="IITK Logo" class="sticky-logo">
+                    <a class="navbar-brand" href="/index.php">
+                        <img src="/publications/blogs/logo(3).png" alt="IITK Logo" class="sticky-logo">
                     </a>
                     
                     <div class="collapse navbar-collapse" id="mainNavbar">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="<?php echo isNavActive('home', $active_section); ?>" aria-current="page" href="/dora/internship/index.php">Home</a>
+                                <a class="<?php echo isNavActive('home', $active_section); ?>" aria-current="page" href="/index.php">Home</a>
                             </li>
                             
                             <li class="nav-item dropdown">
@@ -212,7 +212,7 @@ function isNavActive($section, $active_section) {
                                             <li><h6 class="dropdown-header text-warning">News</h6></li>
                                             <li><a class="dropdown-item" href="\DORA\Internship\ne\institute_news.php">Institute News</a></li>
                                             <li><a class="dropdown-item" href="\DORA\Internship\ne\alum-news.php">Alumni News</a></li>
-                                            <li><a class="dropdown-item" href="/dora/internship/ne/obituaries.php">Obituaries</a></li>
+                                            <li><a class="dropdown-item" href="/ne/obituaries.php">Obituaries</a></li>
                                         </div>
                                     </div>
                                 </ul>
@@ -224,40 +224,40 @@ function isNavActive($section, $active_section) {
                                     <div class="row g-0">
                                         <div class="col-lg-4 mega-col">
                                             <li><h6 class="dropdown-header text-warning">Academic</h6></li>
-                                            <li><a class="dropdown-item" href="/dora/internship/initiatives/facultyinitiative.php">Faculty Initiatives</a></li>
-                                            <li><a class="dropdown-item" href="/dora/internship/initiatives/distinguished-series.php">Distinguished Lecture Series</a></li>
-                                            <li><a class="dropdown-item" href="/dora/internship/initiatives/df.php">Departmental Fund</a></li>
+                                            <li><a class="dropdown-item" href="/initiatives/facultyinitiative.php">Faculty Initiatives</a></li>
+                                            <li><a class="dropdown-item" href="/initiatives/distinguished-series.php">Distinguished Lecture Series</a></li>
+                                            <li><a class="dropdown-item" href="/initiatives/df.php">Departmental Fund</a></li>
                                         </div>
                                         <div class="col-lg-4 mega-col">
                                             <li><h6 class="dropdown-header text-warning">Student Support</h6></li>
-                                            <li><a class="dropdown-item" href="/dora/internship/initiatives/scholarship.php">Scholarships</a></li>
-                                            <li><a class="dropdown-item" href="/dora/internship/initiatives/awards_initiative.php">Awards</a></li>
-                                            <li><a class="dropdown-item" href="/dora/internship/initiatives/oi.php">Other Initiatives</a></li>
+                                            <li><a class="dropdown-item" href="/initiatives/scholarship.php">Scholarships</a></li>
+                                            <li><a class="dropdown-item" href="/initiatives/awards_initiative.php">Awards</a></li>
+                                            <li><a class="dropdown-item" href="/initiatives/oi.php">Other Initiatives</a></li>
                                         </div>
                                         <div class="col-lg-4 mega-col">
                                             <li><h6 class="dropdown-header text-warning">Infrastructure</h6></li>
-                                            <li><a class="dropdown-item" href="/dora/internship/initiatives/gym.php">Gym Upgrade & Expansion</a></li>
-                                            <li><a class="dropdown-item" href="/dora/internship/initiatives/gangwaal.php">Gangwal School of Medical Sciences</a></li>
+                                            <li><a class="dropdown-item" href="/initiatives/gym.php">Gym Upgrade & Expansion</a></li>
+                                            <li><a class="dropdown-item" href="/initiatives/gangwaal.php">Gangwal School of Medical Sciences</a></li>
                                         </div>
                                     </div>
                                     <div class="row g-0">
                                         <div class="col-lg-4 mega-col">
                                             <li><h6 class="dropdown-header text-warning">Community Welfare</h6></li>
-                                            <li><a class="dropdown-item" href="/dora/internship/initiatives/shiksha-sopan.php">Shiksha Sopan</a></li>
-                                            <li><a class="dropdown-item" href="/dora/internship/initiatives/prayas.php">Prayas</a></li>
-                                            <li><a class="dropdown-item" href="/dora/internship/initiatives/rsk.php">Rozi Shiksha Kendra</a></li>
-                                            <li><a class="dropdown-item" href="/dora/internship/initiatives/opportunity-school.php">Opportunity School</a></li>
+                                            <li><a class="dropdown-item" href="/initiatives/shiksha-sopan.php">Shiksha Sopan</a></li>
+                                            <li><a class="dropdown-item" href="/initiatives/prayas.php">Prayas</a></li>
+                                            <li><a class="dropdown-item" href="/initiatives/rsk.php">Rozi Shiksha Kendra</a></li>
+                                            <li><a class="dropdown-item" href="/initiatives/opportunity-school.php">Opportunity School</a></li>
                                         </div>
                                         <div class="col-lg-4 mega-col">
                                             <li><h6 class="dropdown-header text-warning">Centres</h6></li>
-                                            <li><a class="dropdown-item" href="/dora/internship/initiatives/ShivaniCentre.php">Shivani Centre for Languages</a></li>
-                                            <li><a class="dropdown-item" href="/dora/internship/initiatives/c1.php">Kesavan Centre for Energy Policy</a></li>
-                                            <li><a class="dropdown-item" href="/dora/internship/initiatives/mehta-center.php">Mehta Center for Engineering in Medicine</a></li>
+                                            <li><a class="dropdown-item" href="/initiatives/ShivaniCentre.php">Shivani Centre for Languages</a></li>
+                                            <li><a class="dropdown-item" href="/initiatives/c1.php">Kesavan Centre for Energy Policy</a></li>
+                                            <li><a class="dropdown-item" href="/initiatives/mehta-center.php">Mehta Center for Engineering in Medicine</a></li>
                                         </div>
                                         <div class="col-lg-4 mega-col">
                                             <li><h6 class="dropdown-header text-warning">Educational</h6></li>
-                                            <li><a class="dropdown-item" href="/dora/internship/initiatives/ns.php">Kislaya School</a></li>
-                                            <li><a class="dropdown-item" href="/dora/internship/initiatives/campus.php">Campus School</a></li>
+                                            <li><a class="dropdown-item" href="/initiatives/ns.php">Kislaya School</a></li>
+                                            <li><a class="dropdown-item" href="/initiatives/campus.php">Campus School</a></li>
                                             <br>
                                             <li><h6 class="dropdown-header text-warning">Batch</h6></li>
                                             <li><a class="dropdown-item" href="#">View All</a></li>
@@ -269,11 +269,11 @@ function isNavActive($section, $active_section) {
                             <li class="nav-item dropdown">
                                 <a class="<?php echo isNavActive('awards', $active_section); ?> dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Awards</a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="/dora/internship/awards/daa.php">DA Award</a></li>
-                                    <li><a class="dropdown-item" href="/dora/internship/awards/skd.php">SKD Award</a></li>
-                                    <li><a class="dropdown-item" href="/dora/internship/awards/ds.php">DS Award</a></li>
-                                    <li><a class="dropdown-item" href="/dora/internship/awards/yaa.php">YA Award</a></li>
-                                    <li><a class="dropdown-item" href="/dora/internship/awards/csea.php">CSE-PJBT Award</a></li>
+                                    <li><a class="dropdown-item" href="/awards/daa.php">DA Award</a></li>
+                                    <li><a class="dropdown-item" href="/awards/skd.php">SKD Award</a></li>
+                                    <li><a class="dropdown-item" href="/awards/ds.php">DS Award</a></li>
+                                    <li><a class="dropdown-item" href="/awards/yaa.php">YA Award</a></li>
+                                    <li><a class="dropdown-item" href="/awards/csea.php">CSE-PJBT Award</a></li>
                                 </ul>
                             </li>
                             
@@ -290,15 +290,15 @@ function isNavActive($section, $active_section) {
                                 <a class="<?php echo isNavActive('alumni', $active_section); ?> dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Alumni</a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
                                     <li><a class="dropdown-item" href="https://iitkalumni.org/" target="_blank">Alumni Association</a></li>
-                                    <li><a class="dropdown-item" href="/dora/internship/alumni/notablealumni.php">Notable Alumni</a></li>
-                                    <li><a class="dropdown-item" href="/dora/internship/alumni/awards_honours.php">Recognition & Honors</a></li>
+                                    <li><a class="dropdown-item" href="/alumni/notablealumni.php">Notable Alumni</a></li>
+                                    <li><a class="dropdown-item" href="/alumni/awards_honours.php">Recognition & Honors</a></li>
                                 </ul>
                             </li>
                             
                             <li class="nav-item dropdown">
                                 <a class="<?php echo isNavActive('csr', $active_section); ?> dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">CSR</a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="/dora/internship/csr1.php">CSR Initiatives</a></li>
+                                    <li><a class="dropdown-item" href="/csr1.php">CSR Initiatives</a></li>
                                     <li><a class="dropdown-item" href="https://iitk.ac.in/dora/csr-details.php">Forms</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="https://iitk.ac.in/dora/iitk-csr-project-catalogue.pdf">IITK CSR Project Catalogue</a></li>
@@ -309,27 +309,27 @@ function isNavActive($section, $active_section) {
                             <li class="nav-item dropdown">
                                 <a class="<?php echo isNavActive('publications', $active_section); ?> dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Publications</a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="/dora/internship/publications/newsletter.php">Newsletter</a></li>
-                                    <li><a class="dropdown-item" href="/dora/internship/publications/annualreport.php">Annual Report</a></li>
-                                    <li><a class="dropdown-item" href="/dora/internship/publications/spark.php">Spark</a></li>
+                                    <li><a class="dropdown-item" href="/publications/newsletter.php">Newsletter</a></li>
+                                    <li><a class="dropdown-item" href="/publications/annualreport.php">Annual Report</a></li>
+                                    <li><a class="dropdown-item" href="/publications/spark.php">Spark</a></li>
                                     <li><a class="dropdown-item" href="https://iitk.ac.in/dora/kritajna/kritajna.pdf" target="_blank">Kritajna</a></li>
                                     <li><a class="dropdown-item" href="https://iitk.ac.in/dora/kritajna/kritajna-2022.pdf" target="_blank">Kritajna-2022</a></li>
-                                    <li><a class="dropdown-item" href="/dora/internship/publications/blogs/blogs.php">Blog</a></li>
+                                    <li><a class="dropdown-item" href="/publications/blogs/blogs.php">Blog</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="https://iitk.ac.in/dora/samanvay_brochure_V6.pdf" target="_blank">IITK Samanvay 2024</a></li>
                                 </ul>
                             </li>
                             
                             <li class="nav-item">
-                                <a class="<?php echo isNavActive('team', $active_section); ?>" href="/dora/internship/teams.php">Team</a>
+                                <a class="<?php echo isNavActive('team', $active_section); ?>" href="/teams.php">Team</a>
                             </li>
                             
                             <li class="nav-item">
-                                <a class="<?php echo isNavActive('career', $active_section); ?>" href="/dora/internship/career.php">Career</a>
+                                <a class="<?php echo isNavActive('career', $active_section); ?>" href="/career.php">Career</a>
                             </li>
                         </ul>
                         
-                        <form class="d-flex" role="search" action="/dora/internship/search.php" method="get">
+                        <form class="d-flex" role="search" action="/search.php" method="get">
                             <div class="input-group">
                                 <input class="form-control" type="search" placeholder="Search..." aria-label="Search" name="query">
                                 <button class="btn btn-outline-light" type="submit">
@@ -345,14 +345,14 @@ function isNavActive($section, $active_section) {
     
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="/dora/internship/assets/JS/header.js"></script>
+    <script src="/assets/JS/header.js"></script>
     
     <!-- Ensure Home tab is active on index.php -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const currentPage = '<?php echo $current_page; ?>';
             if (currentPage === 'index.php') {
-                const homeNav = document.querySelector('a[href="/dora/internship/index.php"]');
+                const homeNav = document.querySelector('a[href="/index.php"]');
                 if (homeNav) {
                     // Remove active class from all nav items
                     document.querySelectorAll('.nav-link').forEach(link => {
