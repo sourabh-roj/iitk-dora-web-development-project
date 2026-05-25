@@ -108,5 +108,5 @@
             </div>
         </div>
     </main>
-    <script src="../assets/js/skd.js"></script>
+    <script src="../../assets/js/skd.js"></script>
     <?php include("../footer.php"); ?>
