@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  font-family: sans-serif;
+  background: #f9fafb;
+  color: #1a1a1a;
+  /* min-height: 100vh; */
+  /* font-size: 1.1rem; */
+}
+.shivani-container {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 20px;
+  animation: fadeIn 0.8s ease-in;
+}
+.shivani-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #003366;
+  padding: 35px 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+.shivani-heading::after {
+  content: '';
+  display: block;
+  width: 180px;
+  height: 8px;
+  background-color: #f4c430;
+  margin: 12px auto;
+  border-radius: 4px;
+}
+.shivani-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.shivani-card {
+  padding: 1.8rem;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-left: 6px solid #0059b3;
+  text-align: left;
+  transition: box-shadow 0.3s ease;
+}
+.shivani-card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+.shivani-img-container {
+  float: left;
+  margin-right: 1.8rem;
+  margin-bottom: 1.2rem;
+  border-radius: 12px;
+  background: #f0f0f0;
+  border: 2px solid #e0e0e0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+.shivani-img-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #003087;
+  transition: transform 0.3s ease;
+}
+.shivani-img-container img:hover {
+  transform: scale(1.05);
+}
+.shivani-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.8rem;
+  margin: 1.8rem 0;
+}
+.shivani-grid-2 .shivani-img-container {
+  max-width: 100%;
+  border-radius: 12px;
+  background: #f0f0f0;
+  border: 2px solid #e0e0e0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+.shivani-grid-2 .shivani-img-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #003087;
+  transition: transform 0.3s ease;
+}
+.shivani-grid-2 .shivani-img-container img:hover {
+  transform: scale(1.05);
+}
+.shivani-info {
+  margin: 0 auto;
+}
+.shivani-info h2 {
+  font-size: 1.75rem;
+  color: #003087;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+  position: relative;
+  padding-bottom: 8px;
+}
+.shivani-info h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #f4c430;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 2px;
+}
+.shivani-info .shivani-meta {
+  font-size: 1.05rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+.shivani-info p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #333;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .shivani-container {
+    padding: 15px;
+  }
+  .shivani-heading {
+    font-size: 2.5rem;
+    padding: 25px 0;
+  }
+  .shivani-heading::after {
+    width: 140px;
+    height: 6px;
+  }
+  .shivani-card {
+    padding: 1.2rem;
+  }
+  .shivani-img-container {
+    float: none;
+    max-width: 280px;
+    margin: 0 auto 1.2rem;
+  }
+  .shivani-info {
+    text-align: center;
+  }
+  .shivani-info h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .shivani-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .shivani-heading {
+    font-size: 1.8rem;
+    padding: 20px 0;
+  }
+  .shivani-heading::after {
+    width: 120px;
+    height: 5px;
+  }
+  .shivani-card {
+    padding: 1rem;
+  }
+  .shivani-img-container {
+    max-width: 240px;
+  }
+  .shivani-info h2 {
+    font-size: 1.4rem;
+  }
+  .shivani-info p {
+    font-size: 1rem;
+  }
+}

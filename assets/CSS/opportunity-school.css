@@ -1,0 +1,248 @@
+/* Global Resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: sans-serif;
+    background: #f9fafb;
+    color: #1a1a1a;
+    min-height: 100vh;
+}
+
+/* Main Section Styles */
+.opp-school-section {
+    padding: 40px 0;
+}
+
+.opp-school-section .opp-container {
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 20px;
+    animation: fadeIn 0.8s ease-in;
+}
+
+/* Title Area */
+.opp-school-section .opp-title-area {
+    text-align: center;
+}
+
+.opp-school-section .opp-title-area:not(.opp-card .opp-title-area):not(.opp-card.parallel .opp-title-area) {
+    margin-bottom: 1rem; /* Main "Opportunity School" title */
+}
+
+.opp-school-section .opp-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #003366;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    position: relative;
+    /* padding-bottom: 12px; */
+}
+
+.opp-school-section .opp-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 5px;
+    background: #e2b347;
+    margin: 12px auto 0px;
+    border-radius: 4px;
+}
+
+.opp-school-section .opp-title-sub {
+    font-size: 2rem;
+}
+
+.opp-school-section .opp-subtitle {
+    font-size: 1.4rem;
+    color: #003366;
+    margin: 1rem 0;
+}
+
+/* Card Styles */
+.opp-school-section .opp-card,
+.opp-school-section .opp-card.parallel {
+    padding: 1rem;
+    background: linear-gradient(135deg, #ffffff, #f7f8fa);
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    border-left: 8px solid #0059b3;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 3rem;
+}
+
+.opp-school-section .opp-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.opp-school-section .opp-card.parallel {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.opp-school-section .opp-card:hover,
+.opp-school-section .opp-card.parallel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.opp-school-section .opp-card .opp-title-area,
+.opp-school-section .opp-card.parallel .opp-title-area {
+    margin-bottom: 0.5rem; /* Reduced for subheadings to remove extra space */
+}
+
+/* Image and Grid Styles */
+.opp-school-section .opp-img-container {
+    display: block;
+    border-radius: 12px;
+    border: 3px solid #0059b3;
+    box-shadow: 0 6px 12px rgba(1, 1, 1, 0.15);
+    overflow: hidden;
+    animation: popIn 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 0 auto;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.opp-school-section .opp-card.parallel .opp-img-container {
+    flex: 0 0 300px;
+    width: 300px;
+    height: 300px;
+    min-width: 550px;
+    min-height: 300px;
+    margin: 0;
+}
+
+.opp-school-section .opp-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.opp-school-section .opp-img-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.opp-school-section .opp-grid {
+    margin: 0; /* No extra spacing */
+}
+
+.opp-school-section .opp-grid-three {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+.opp-school-section .opp-grid-four {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+}
+
+.opp-school-section .opp-grid-three .opp-img-container {
+    max-width: 350px;
+}
+
+.opp-school-section .opp-grid-four .opp-img-container {
+    max-width: 400px;
+}
+
+.opp-school-section .opp-info {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+}
+
+.opp-school-section .opp-info p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #333;
+    margin: 0;
+}
+
+.opp-school-section .opp-caption {
+    text-align: center;
+    font-size: 1.15rem;
+    color: #333;
+    margin-top: 0.5rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .opp-school-section .opp-container {
+        padding: 15px;
+    }
+
+    .opp-school-section .opp-title {
+        font-size: 2.4rem;
+    }
+
+    .opp-school-section .opp-title-sub {
+        font-size: 1.8rem;
+    }
+
+    .opp-school-section .opp-card,
+    .opp-school-section .opp-card.parallel {
+        padding: 0.8rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .opp-school-section .opp-img-container {
+        max-width: 350px;
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+        margin: 0 auto;
+    }
+
+    .opp-school-section .opp-grid-three,
+    .opp-school-section .opp-grid-four {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .opp-school-section .opp-title {
+        font-size: 2rem;
+    }
+
+    .opp-school-section .opp-title-sub {
+        font-size: 1.6rem;
+    }
+
+    .opp-school-section .opp-card,
+    .opp-school-section .opp-card.parallel {
+        padding: 0.6rem;
+    }
+
+    .opp-school-section .opp-img-container {
+        max-width: 300px;
+        min-height: 150px;
+    }
+}

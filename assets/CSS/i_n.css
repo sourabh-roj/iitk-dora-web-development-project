@@ -1,0 +1,316 @@
+:root {
+  --iitk-blue: #002349;
+  --iitk-gold: #e2b347;
+  --light-gold: #f5e8c7;
+  --light-text: #ffffff;
+  --dark-text: #1a202c;
+  --subtle-gray: #f8fafc;
+  --sidebar-bg: #ffffff;
+  --card-bg: #ffffff;
+  --image-caption-color: #64748b;
+  --border-color: #e2e8f0;
+  --shadow-light: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --hover-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--subtle-gray);
+  color: var(--dark-text);
+  line-height: 1.6;
+}
+
+/* Header Styles */
+.iitknews-insti-header {
+  width: 100%;
+  background: #e2e5e9;
+  padding: 3rem 0;
+  margin-bottom: 0;
+}
+
+.iitknews-header-container {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.iitknews-insti-header h1 {
+  margin: 0;
+  color: var(--dark-text);
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.iitknews-insti-header h1::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  background-color: var(--iitk-gold);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+/* Main Container */
+.iitknews-main-container {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.iitknews-container {
+  display: flex;
+  gap: 2rem;
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+/* Sidebar Styles */
+.iitknews-sidebar {
+  position: sticky;
+  top: 6rem;
+  width: 280px;
+  flex-shrink: 0;
+  background: var(--sidebar-bg);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow-light);
+  border: 1px solid var(--border-color);
+  height: fit-content;
+  border-left: 3px solid rgb(1, 1, 45) ;
+}
+
+.iitknews-sidebar-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--iitk-blue);
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid var(--iitk-gold);
+}
+
+.iitknews-sidebar-years {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.iitknews-sidebar-year {
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
+  border-radius: 12px;
+  color: var(--iitk-blue);
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background: var(--subtle-gray);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.iitknews-sidebar-year:hover {
+  background: var(--light-gold);
+  border-color: var(--iitk-gold);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.iitknews-sidebar-year.iitknews-active {
+  background: var(--iitk-blue);
+  color: var(--light-text);
+  border-color: var(--iitk-gold);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Main Content */
+.iitknews-main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+#news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* News Block Styles */
+.iitknews-news-block {
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: var(--shadow-light);
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.iitknews-news-block:hover {
+  box-shadow: var(--hover-shadow);
+  transform: translateY(-4px);
+}
+
+.iitknews-news-header {
+  margin-bottom: 1.5rem;
+}
+
+.iitknews-news-block h3 {
+  margin: 0 0 0.75rem 0;
+  color: var(--iitk-blue);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.iitknews-news-date {
+  color: var(--image-caption-color);
+  font-size: 1rem;
+  font-weight: 600;
+  background: var(--subtle-gray);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: inline-block;
+  border-left: 4px solid var(--iitk-gold);
+}
+
+.iitknews-news-block p {
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--dark-text);
+}
+
+/* Image Grid */
+.iitknews-news-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.iitknews-news-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+.iitknews-news-img:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-medium);
+}
+
+/* No News Message */
+.iitknews-no-news {
+  text-align: center;
+  color: var(--image-caption-color);
+  font-size: 1.2rem;
+  padding: 3rem;
+  background: var(--card-bg);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .iitknews-main-container {
+    max-width: 100%;
+    padding: 0 1.5rem;
+  }
+
+  .iitknews-container {
+    gap: 1.5rem;
+  }
+
+  .iitknews-sidebar {
+    width: 250px;
+  }
+}
+
+@media (max-width: 900px) {
+  .iitknews-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .iitknews-sidebar {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .iitknews-sidebar-years {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .iitknews-sidebar-year {
+    flex: 1;
+    min-width: 120px;
+    margin-bottom: 0;
+  }
+
+  .iitknews-insti-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .iitknews-news-block {
+    padding: 1.5rem;
+  }
+
+  .iitknews-news-block h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .iitknews-main-container {
+    padding: 0 1rem;
+  }
+
+  .iitknews-container {
+    padding: 1rem 0;
+  }
+
+  .iitknews-insti-header {
+    padding: 2rem 0;
+  }
+
+  .iitknews-insti-header h1 {
+    font-size: 2rem;
+  }
+
+  .iitknews-news-images {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .iitknews-news-img {
+    height: 200px;
+  }
+
+  .iitknews-news-block {
+    padding: 1.25rem;
+  }
+
+  .iitknews-sidebar {
+    padding: 1.5rem;
+  }
+
+  .iitknews-sidebar-year {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+}

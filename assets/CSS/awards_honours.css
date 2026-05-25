@@ -1,0 +1,304 @@
+/* Custom CSS Variables for easier theme management */
+:root {
+    --iitk-blue: #002349;
+    --dark-text: #333333;
+    --light-grey-bg: #f8f8f8;
+    --border-color: #e0e0e0;
+    --accordion-bg: #f7fafc;
+    --accordion-label-bg: #f0f6fa;
+    --accordion-label-hover-bg: #e1f0ff;
+    --link-blue: #2980b9;
+    --bullet-text-color: #204080;
+    --header-spacing-top: 30px; /* New variable for top spacing */
+    --heading-bg-color: #eaf2f8; /* A light blue-gray inspired by the provided image */
+}
+
+.awards-page-header {
+    display: flex;
+    justify-content: center; /* Center the inner-content */
+    align-items: center;
+    padding: var(--header-spacing-top) 0 30px 0; /* Adjusted padding, no horizontal padding here as inner-content will handle it */
+    width: 100%; /* Make background full width */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    border-bottom: 2px solid var(--border-color); /* Separator below the header */
+    margin-bottom: 40px; /* Increased space below the header line */
+    background-color: rgba(226,229,233); /* Added new background color */
+}
+
+/* Inner content wrapper for the header to control max-width and centering */
+.awards-page-header .inner-content {
+    display: flex;
+    justify-content: space-between; /* Pushes title to left, search bar to right */
+    align-items: center; /* Vertically aligns items in the middle */
+    width: 88%; /* Match container width for alignment */
+    max-width: 1200px; /* Keep a max-width */
+    margin: 0 auto; /* Center the content within the full-width header */
+}
+
+/* Main title styling - specific to awards page */
+.awards-title {
+    font-size: 2.2em;
+    color: var(--dark-text);
+    margin: 0;
+    text-align: center; /* Updated to center-align */
+    letter-spacing: -0.02em;
+    position: relative; /* Required for absolute positioning of underline */
+    margin-bottom: 2rem; /* Space below title */
+}
+
+.awards-title-underline {
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 11.5%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: #e2b347; /* Gold color */
+    border-radius: 2px;
+}
+
+
+
+/* Wrapper for search input and icon */
+.search-input-wrapper {
+    position: relative; /* Needed to position the icon */
+    width: 450px; /* Fixed width for desktop */
+    z-index: 10; /* Ensure it's above other elements if any overlap */
+}
+
+/* Search bar styling */
+.search-bar {
+    width: 100%; /* Fill the wrapper */
+    padding: 10px 15px 10px 40px; /* Left padding for icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+    transition: border-color 0.3s ease;
+}
+
+.search-bar:focus {
+    outline: none;
+    border-color: var(--link-blue); /* Highlight on focus */
+}
+
+/* Search icon styling */
+.search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em; /* Adjust size of Font Awesome icon */
+    color: #555; /* Darker grey color for better visibility */
+    pointer-events: none; /* Allows clicks to pass through to the input */
+}
+
+/* Container for the overall two-column layout (Fellowship + Career Awards Wrapper) */
+.container {
+    display: flex;
+    gap: 40px; /* Space between main columns */
+    width: 90%; /* Explicitly 80% of the page width */
+    max-width: 1600px; /* Keep a max-width for very large screens */
+    margin: 0 auto 40px auto; /* Center alignment with bottom margin */
+    padding: 0 20px; /* Horizontal padding for smaller screens if content goes outside 80% */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+/* Styling for each main content column */
+.column {
+    background-color: #fff;
+    padding: 30px 20px; /* Padding inside columns */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2); /* Soft shadow for depth */
+    min-width: 300px; /* Minimum width for responsiveness */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+/* Adjust main column widths for Fellowship (left) and Career Awards container (right) */
+.fellowship-column {
+    flex: 1.2; /* Fellowship takes 1 part of space */
+}
+
+.career-awards-main-column {
+    flex: 2.2; /* Career Awards container takes 2 parts of space */
+    display: flex; /* Make this a flex container for its internal elements */
+    flex-direction: column; /* Stack its title and then the sub-columns */
+}
+
+/* Container for the two sub-columns within Career Awards */
+.career-awards-sub-columns {
+    display: flex; /* Make this a flex container */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens if needed, but for desktop it will stay two */
+    gap: 20px; /* Space between the two career awards sub-columns */
+    flex: 1.2; /* Allows the sub-columns to fill the remaining space vertically */
+}
+
+/* Styling for each sub-column within Career Awards */
+.career-awards-sub-column {
+    flex: 1.2; /* Each sub-column takes equal space */
+    min-width: 45%; /* Ensure two columns fit even with gap, adjust as needed */
+    /* No additional padding here to maintain accordion size consistency with fellowship */
+}
+
+
+/* Main section titles (Fellowships, Career Awards) */
+.section-title {
+    font-size: 1.6em;
+    color: var(--iitk-blue); /* Dark blue as requested */
+    margin-top: 0;
+    margin-bottom: 30px; /* Increased space below section title */
+    letter-spacing: 0.5px;
+    text-align: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+/* Accordion container for each subheading */
+.accordion {
+    margin-bottom: 14px;
+    border-radius: 7px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background: var(--accordion-bg);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+    display: block; /* Ensure accordions are visible by default */
+}
+
+/* Hide the default checkbox input */
+.accordion input[type="checkbox"] {
+    display: none;
+}
+
+/* Styling for the clickable label (accordion header) */
+.accordion label {
+    display: flex;
+    align-items: center;
+    font-size: 1.12em;
+    font-weight: 500;
+    color: var(--link-blue);
+    padding: 13px 18px;
+    cursor: pointer;
+    background: var(--accordion-label-bg);
+    border-bottom: 1px solid var(--border-color);
+    transition: background 0.2s;
+    position: relative;
+    user-select: none;
+}
+
+/* Hover effect for accordion labels */
+.accordion label:hover {
+    background: var(--accordion-label-hover-bg);
+}
+
+/* Down arrow icon for accordion labels */
+.accordion label:after {
+    content: '▼';
+    margin-left: auto;
+    font-size: 0.95em;
+    color: #888;
+    transition: transform 0.2s;
+}
+
+/* Rotate arrow when accordion is open */
+.accordion input[type="checkbox"]:checked + label:after {
+    transform: rotate(-180deg);
+}
+
+/* Styling for the accordion content area */
+.accordion-content {
+    display: none; /* Hidden by default */
+    padding: 10px 24px 16px 24px;
+    background: #fff;
+    font-size: 1em;
+    color: #444;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* Display accordion content when checkbox is checked */
+.accordion input[type="checkbox"]:checked + label + .accordion-content {
+    display: block;
+}
+
+/* Styling for unordered lists specific to the columns */
+.column ul { /* Added .column for specificity */
+    list-style: disc inside;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for list items specific to the columns */
+.column ul li { /* Added .column for specificity */
+    padding: 5px 0; /* Restored padding for readability */
+    border-bottom: 1px dotted #f5f5f5; /* Restored border for separation */
+    font-size: 0.99em;
+    color: var(--bullet-text-color);
+}
+
+/* Styling for clickable names within list items specific to the columns */
+.column ul li a { /* Added .column for specificity */
+    color: var(--bullet-text-color); /* Inherit or set a specific color */
+    text-decoration: none; /* Remove underline by default */
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.column ul li a:hover { /* Added .column for specificity */
+    color: var(--link-blue); /* Highlight on hover */
+    text-decoration: underline; /* Add underline on hover for clickability cue */
+}
+
+/* Style for highlighted text */
+.highlight {
+    background-color: yellow; /* Or any other highlighting color */
+    font-weight: bold;
+    padding: 2px 0;
+    border-radius: 3px;
+}
+
+
+/* Remove border for the last list item specific to the columns */
+.column ul li:last-child { /* Added .column for specificity */
+    border-bottom: none;
+}
+
+/* Responsive adjustments for screens up to 900px wide */
+@media (max-width: 900px) {
+    .awards-page-header {
+        flex-direction: column; /* Stack title and search bar vertically */
+        align-items: flex-start; /* Align stacked items to the left */
+        padding: 20px;
+        margin-bottom: 20px; /* Adjust spacing for mobile */
+    }
+    .awards-page-header .inner-content {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 0; /* Remove inner padding on mobile as outer padding handles it */
+    }
+    .awards-page-header .awards-title {
+        margin-bottom: 15px; /* Space between title and search bar */
+    }
+    .search-input-wrapper {
+        width: 100%; /* Full width for mobile search bar */
+        max-width: 300px; /* Optional: limit max width even on mobile */
+        box-sizing: border-box; /* Include padding and border in element's total width */
+    }
+    .container {
+        flex-direction: column;
+        gap: 20px;
+        width: auto; /* Allow it to shrink on mobile */
+        padding: 0 6vw 30px 6vw;
+    }
+    .column {
+        padding: 20px 10px;
+        flex: auto; /* Remove specific flex values for mobile to stack columns */
+    }
+    .career-awards-sub-columns {
+        flex-direction: column; /* Stack sub-columns for mobile */
+        gap: 20px;
+    }
+    .section-title {
+        margin-bottom: 20px; /* Adjust spacing for mobile */
+    }
+}

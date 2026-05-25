@@ -1,0 +1,169 @@
+/* Scoped styles to .department-page to avoid affecting header or footer */
+.department-page {
+  font-family: sans-serif;
+  color: #333333;
+  --iitk-blue: #002349;
+  --iitk-gold: #e2b347;
+  --light-text: #ffffff;
+  --dark-text: #333333;
+  --hover-blue: #003366;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../imag/Img-2.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.department-page .section {
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+.department-page .department-section {
+  padding: 40px 50px;
+}
+
+.department-page .department-section .feature-img {
+  max-height: 800px;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.department-page .department-section .nav-tabs {
+  border: 0;
+  position: sticky;
+  top: 120px;
+  z-index: 500;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  border-left: 4px solid #002349;
+}
+
+.department-page .department-section .nav-link {
+  border: 0;
+  padding: 12px 20px;
+  transition: all 0.3s ease;
+  color: #333333;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.department-page .department-section .nav-link:hover {
+  color: #002349;
+  background: #f1f5f9;
+}
+
+.department-page .department-section .nav-link.active {
+  color: #ffffff;
+  background: #002349;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.department-page .department-section .details h3 {
+  font-size: 20px;
+  color: #002349;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.department-page .section-content h2 {
+  font-size: 24px;
+  color: #002349;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.department-page .section-content .card h2::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--iitk-gold);
+}
+
+.department-page .feature-img img {
+  max-height: 300px;
+  border-radius: 8px;
+}
+
+.department-page .section-content .card {
+  margin-bottom: 30px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.department-page .section-content .joy-gill-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.department-page .section-content .joy-gill-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  min-height: 120px;
+}
+
+.department-page .section-content .joy-gill-card .card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.department-page .section-content .joy-gill-card .card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #002349;
+  margin-bottom: 10px;
+}
+
+.department-page .section-content .joy-gill-card .card-text {
+  font-size: 16px;
+  color: #444444;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.department-page .section-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.department-page .table-bordered {
+  color: #333333;
+  border-color: #e5e7eb;
+}
+
+.department-page .table-bordered th,
+.department-page .table-bordered td {
+  border-color: #e5e7eb;
+}

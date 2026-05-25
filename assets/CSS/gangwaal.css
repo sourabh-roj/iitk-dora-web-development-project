@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7f8fa;
+    color: #222;
+    min-height: 100vh;
+  }
+  
+  .page-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  
+  .institute-main-heading {
+    background: rgba(226, 229, 233, 1);
+    padding: 2.5rem 0 2rem 0;
+    text-align: center;
+    border-radius: 0.5rem;
+  }
+  
+  .institute-main-heading h1 {
+    font-size: 2rem;
+    color: #000000;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    font-family: sans-serif;
+    
+  }
+  
+  .content-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    transition: box-shadow 0.2s;
+    border-left: 6px solid #1976d2;
+    margin-bottom: 2rem;
+  }
+  
+  .content-card h2 {
+    font-size: 1.3rem;
+    color: #002147;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+  
+  .card-meta {
+    font-size: 1rem;
+    color: #4fa4ee;
+    margin-bottom: 1rem;
+    margin-top: 0.2rem;
+    font-style: italic;
+    font-weight: 500;
+  }
+  
+  .content-card p {
+    font-size: 1.06rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 1.2rem;
+  }
+  
+  .initiative-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  
+  .gangwal-photo {
+    width: 220px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.07);
+    border:3px solid #002147;
+    flex-shrink: 0;
+  }
+  
+  .initiative-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .initiative-images {
+    margin-top: 1.3rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .myproject-square {
+    display: flex;
+    width: 400px;
+    height: 400px;
+    object-fit:cover;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.07);
+    border: 3px solid #002147;
+    justify-content: center;
+    border-radius: 10px;
+  }
+  
+  .event-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+  
+  .event-gallery img {
+    width: calc(33% - 1rem);
+    flex: 0 1 calc(33% - 1rem);
+    aspect-ratio: 3/2;
+    border-radius: 12px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.07);
+    background: #f5f5f5;
+    object-fit: cover;
+    border: 1px solid #002147;
+  }
+@keyframes scaleIn {
+  from { transform: scale(0.9); }
+  to { transform: scale(1); }
+}
+  
+  @media (max-width: 800px) {
+    .initiative-flex {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .gangwal-photo {
+      margin-bottom: 1rem;
+      width: 100%;
+      max-width: 240px;
+      height: 100%;
+      align-self: flex-start;
+    }
+    .myproject-square {
+      width: 250px;
+      height: 250px;
+    }
+    .event-gallery img {
+      width: calc(50% - 1rem);
+      flex: 0 1 calc(50% - 1rem);
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .event-gallery img {
+      width: 100%;
+      flex: 0 1 100%;
+    }
+  }
+  

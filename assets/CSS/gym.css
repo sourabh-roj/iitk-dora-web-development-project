@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    font-family: sans-serif;
+    background: #f7f8fa;
+    color: #222;
+    min-height: 100vh;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+  }
+  
+  .gym-header {
+    background: rgba(226, 229, 233, 1);
+    font-size: 2.2rem;
+    font-weight: 800;
+    padding: 2.5rem 0 2rem 0;
+    text-align: center;
+    margin: 0 0 2rem 0;
+    border-radius: 0.5rem;
+  }
+  
+  /* .on-heading {
+    font-size: 2.2rem;
+    color: #000000;
+    font-weight: 800;
+    letter-spacing: 1px;
+  } */
+  .on-heading::after {
+    content: '';
+    display: block;
+    width: 130px;
+    height: 5px;
+    background-color:#e2b347;
+    margin: 2px auto 0;
+    border-radius: 4px;
+  }
+  
+  .main-flex {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  aside {
+    flex: 1 1 220px;
+    max-width: 260px;
+    min-width: 180px;
+  }
+  .gym-list {
+    flex: 3 1 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-width: 0;
+  }
+  
+  .gym-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    transition: box-shadow 0.2s;
+    border-left: 6px solid #1976d2;
+    min-width: 0;
+  }
+  
+  .gym-card:hover {
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  }
+  
+  .gym-card h2 {
+    font-size: 1.75rem;
+    color: #002147;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+  .gym-card h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color:#e2b347;
+    position: absolute;
+    border-radius: 2px;
+  }
+  
+  .gym-card p {
+    font-size: 1.06rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 1.2rem;
+  }
+  
+  .gym-img-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  .gym-img-gallery img:first-child {
+    grid-column: span 2;
+  }
+  
+  .gym-img-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.07);
+    border: 1px solid #002147;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .gym-img-gallery img.loaded {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .gym-img-gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+    z-index: 1;
+  }
+  
+  @media (max-width: 1024px) {
+    .main-flex {
+      flex-direction: column;
+    }
+    aside {
+      max-width: 100%;
+      margin-bottom: 2rem;
+    }
+  }
+  
+
+@media (max-width: 600px) {
+    .gym-img-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .gym-img-gallery img:first-child {
+      grid-column: auto;
+    }
+  }
+  
+  

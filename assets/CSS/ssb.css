@@ -1,0 +1,55 @@
+/* SOCIAL MEDIA BAR */
+.social-media-bar {
+    position: fixed; /* Stay in the viewport */
+    left: 0; /* Align to the absolute left edge */
+    top: 87%;
+    transform: translateY(-50%);
+    background-color: rgba(203, 208, 212, 0.8); /* IITK Blue with some transparency */
+    border-radius: 0 10px 10px 0; /* Curved right side */
+    padding: 5px; /* Initial padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100; /* Ensure it's above other content */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out, left 0.3s ease-in-out; /* Add left to transition */
+}
+
+.social-media-bar a {
+    font-size: 1.5rem;
+    margin: 5px;  /* Spacing between icons */
+    display: block;
+    transition: transform 0.2s ease-in-out; /* Only transition transform for hover effect */
+}
+
+/* Adjust padding for social media bar icons to make space for the close button */
+.social-media-bar a:first-of-type { /* Target the first link (X icon) */
+    margin-top: 5px; /* Push the first icon down to make space for the close button */
+}
+
+/* Set original brand colors for each icon */
+.social-media-bar a[title*="X"] {
+    color: #000000; /* X (Twitter) black */
+}
+
+.social-media-bar a[title*="YouTube"] {
+    color: #FF0000; /* YouTube Red */
+}
+
+.social-media-bar a[title*="LinkedIn"] {
+    color: #0A66C2; /* LinkedIn Blue */
+}
+
+.social-media-bar a[title*="Facebook"] {
+    color: #0A66C2; /* facebook Blue */
+}
+
+
+/* Hover Effect (Slight Expansion for the whole bar) */
+.social-media-bar:hover {
+    padding: 10px 15px; /* Expand horizontally slightly */
+}
+
+/* Individual Icon Hover: Only scale, keep original color */
+.social-media-bar a:hover {
+    transform: scale(1.3); /* Make icons slightly bigger on hover */
+}

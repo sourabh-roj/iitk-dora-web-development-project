@@ -1,0 +1,338 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    color: #374151;
+}
+
+/* Utility classes */
+.min-h-screen {
+    min-height: 100vh;
+}
+
+.bg-gray-50 {
+    background-color: #6b7280;
+}
+
+/* Header Section */
+.header-section {
+    background-color: rgb(226, 229, 233);
+}
+
+/* Header Container: adjust padding and margin here to control space around the entire header area. */
+.header-container {
+    max-width: 100%;
+    margin: 0 40px 0 30px;
+    padding: 0rem 1.5rem 0rem;
+    /* text-align: center; ADD THIS LINE TO CENTER THE MAIN TITLE */
+}
+
+.main-title {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 300;
+    color: #031d65;
+    /* margin-bottom: 1rem; */ /* Will adjust this based on the underline's position */
+    letter-spacing: -0.025em;
+    line-height: 1;
+    text-align: center; /* This centers the text within the h3 */
+    position: relative; /* THIS IS CRUCIAL: Allows us to position the inner span absolutely */
+    margin-bottom: 2rem; /* Adjust this value for space below the underline and before description */
+
+}
+
+.main-title-underline {
+    display: block; /* Make the span behave like a block for full control */
+    position: absolute; /* Position it relative to its parent (.main-title) */
+    bottom: -10px; /* Adjust this value to move the underline up/down relative to the text baseline */
+    left: 50%; /* Start from the horizontal center of .main-title */
+    transform: translateX(-50%); /* Move back by half its own width to truly center it */
+
+    width: 90px; /* THIS IS WHERE YOU SET YOUR CUSTOM SHORT WIDTH (e.g., 90px or adjust as needed) */
+    height: 4px;
+    background-color: #e2b347; /* Your gold accent color */
+    border-radius: 2px;
+}
+
+
+.main-description {
+    font-size: 1.1rem;
+    color: #6b7280;
+    max-width: 100%;
+    margin-bottom: 0rem;
+    text-align: center;
+}
+
+/* Sticky Header */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: white;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.sticky-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0.5rem 0.5rem;
+}
+
+.sticky-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+    .sticky-content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-container {
+        padding: 1.5rem 1rem 2rem;
+    }
+
+    .sticky-container {
+        padding: 0.5rem 0.9rem;
+    }
+}
+
+/* Category Navigation */
+.category-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+    .category-nav {
+        gap: 1rem;
+    }
+}
+
+.nav-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+    background-color: #f3f4f6;
+    color: #374151;
+}
+
+.nav-btn:hover {
+    background-color: #e5e7eb;
+}
+
+.nav-btn.active {
+    background-color: #1e3a8a;
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Bar */
+.search-container {
+    position: relative;
+    flex: 1;
+    max-width: 28rem;
+}
+
+@media (min-width: 1024px) {
+    .search-container {
+        margin-left: auto;
+    }
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.75rem 3rem 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 9999px 0 0 9999px;
+    font-size: 1rem;
+    color: #111827;
+    background-color: white;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.search-input::placeholder {
+    color: #6b7280;
+}
+
+.search-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.search-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    padding: 0 1rem;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 0 9999px 9999px 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-btn:hover {
+    background-color: #1e40af;
+}
+
+.search-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Alumni Section */
+.alumni-section {
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+@media (min-width: 1024px) {
+    .alumni-section {
+        padding: 3rem 2rem;
+    }
+}
+
+.alumni-container {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .alumni-container {
+        padding: 3rem;
+    }
+}
+
+/* Alumni Grid */
+.alumni-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .alumni-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .alumni-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .alumni-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Alumni Card */
+.alumni-card {
+    background-color: white;
+    border-radius: 0.75rem;
+    border: 1px solid #d2dcf0;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+/* Initially hide all cards except those belonging to the active category or 'all' */
+/* This can be handled by JavaScript setting display: block/none */
+
+.alumni-image {
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto 1rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.alumni-name {
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: #1e3a8a;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-wrap: break-word;
+}
+
+.alumni-batch {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+/* No Results */
+.no-results {
+    text-align: center;
+    padding: 4rem;
+}
+
+.no-results-text {
+    color: #9ca3af;
+    font-size: 1.125rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .main-description {
+        font-size: 1.125rem;
+    }
+
+    .header-container {
+        padding: 2.5rem 1rem 2rem;
+    }
+
+    .sticky-container {
+        padding: 1rem;
+    }
+
+    .alumni-section {
+        padding: 2rem 1rem;
+    }
+
+    .alumni-container {
+        padding: 1.5rem;
+    }
+
+    .category-nav {
+        justify-content: center;
+    }
+
+    .nav-btn {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+    }
+}

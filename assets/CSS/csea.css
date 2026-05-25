@@ -1,0 +1,562 @@
+:root {
+    --primary-color: #003366;
+    --accent-color: #e2b347;
+    --background-color: #f1f5fc;
+    --filter-bg-start: #4b6cb7;
+    --filter-bg-end: #182848;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--primary-color);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 5px 0;
+    position: relative;
+}
+
+.nominate-section {
+    text-align: start;
+    margin: 20px 0 30px;
+}
+
+.button-container {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.nominate-button {
+    display: inline-block !important;
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    padding: 12px 20px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    border-radius: 6px !important;
+    transition: all 0.3s ease !important;
+    border: 2px solid var(--primary-color) !important;
+    letter-spacing: 0.5px !important;
+    text-transform: uppercase !important;
+    cursor: pointer !important;
+}
+
+.nominate-button:hover {
+    background-color: white !important;
+    color: var(--primary-color) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 8px rgba(0, 51, 102, 0.2) !important;
+}
+
+.nominate-button:visited {
+    color: white !important;
+}
+
+.nominate-button:visited:hover {
+    color: var(--primary-color) !important;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.title_one {
+    text-align: center;
+    font-size: 3.25rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 40px 0 60px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.title_one::after {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 8px;
+    background: var(--accent-color);
+    margin: 10px auto 0;
+    border-radius: 4px;
+}
+
+.title_two {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 20px 0 20px;
+    position: relative;
+    letter-spacing: 1.2px;
+}
+
+.title_two::after {
+    content: '';
+    display: block;
+    width: 90px;
+    height: 4px;
+    background: var(--accent-color);
+    margin: 10px auto 0;
+    border-radius: 4px;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 410px;
+    min-height: 500px;
+    flex: 0 0 auto;
+    animation: fadeIn 0.6s ease-out forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profile-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.profile-card:nth-child(1) { animation-delay: 0.1s; }
+.profile-card:nth-child(2) { animation-delay: 0.2s; }
+.profile-card:nth-child(3) { animation-delay: 0.3s; }
+.profile-card:nth-child(4) { animation-delay: 0.4s; }
+.profile-card:nth-child(5) { animation-delay: 0.5s; }
+
+.profile-card img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.profile-card .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.profile-card h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a237e;
+}
+
+.profile-card .award-year {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.profile-card p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    flex-grow: 1;
+}
+
+.profile-card a {
+    display: inline-block;
+    font-size: 16px;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.profile-card a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.profile-card .button-placeholder {
+    height: 40px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.about-section {
+    margin-bottom: 40px;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.about-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-right: 15px;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content.collapsed .extra-content {
+    display: none;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    line-height: 1.7;
+}
+
+.read-more-btn {
+    background: none;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.read-more-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.extra-content {
+    animation: fadeInDown 0.5s ease-out forwards;
+}
+
+.award-scroll-wrapper {
+    width: 100%;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.award-scroll {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    padding: 20px 15px;
+    max-width: 100%;
+    margin: 0 auto;
+    visibility: visible;
+}
+
+.award-scroll.single-card {
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.award-item {
+    margin-bottom: 20px;
+    text-align: center;
+    width: 410px;
+    justify-self: center;
+    visibility: visible;
+    opacity: 1;
+}
+
+.award-year-title {
+    display: none;
+}
+
+.filter-box {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 1350px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 10px;
+}
+
+.filter-top {
+    display: none;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    flex-grow: 1;
+    min-width: 300px;
+}
+
+.dropdown-filter {
+    display: none;
+}
+
+.quick-buttons {
+    margin-bottom: 20px;
+}
+
+.quick-buttons .years,
+.more-years {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.quick-buttons button {
+    padding: 8px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+}
+
+.quick-buttons .year.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.more-years.hidden {
+    display: none;
+}
+
+.active-filters {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background: var(--primary-color);
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+}
+
+.badge .remove {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.clear-all {
+    border: none;
+    background: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.result-count {
+    font-size: 0.95rem;
+    color: #333;
+    margin-top: 10px;
+    padding-left: 2px;
+}
+
+@media (max-width: 1350px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .award-item {
+        width: 390px;
+    }
+
+    .profile-card {
+        width: 390px;
+        min-height: 550px;
+    }
+
+    .profile-card img {
+        width: 270px;
+        height: 270px;
+    }
+
+    .award-scroll {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .award-scroll.single-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 30px 0;
+    }
+
+    .title_one {
+        font-size: 2.75rem;
+    }
+
+    .title_two {
+        font-size: 2.25rem;
+    }
+
+    .profile-card {
+        width: 100%;
+        max-width: 410px;
+        min-height: 530px;
+    }
+
+    .profile-card img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .about-title {
+        font-size: 1.9rem;
+    }
+
+    .about-text {
+        font-size: 1rem;
+    }
+
+    .filter-box {
+        padding: 15px;
+    }
+
+    .award-scroll {
+        grid-template-columns: 1fr;
+    }
+
+    .award-scroll.single-card {
+        grid-template-columns: 1fr;
+    }
+
+    .award-item {
+        width: 100%;
+        max-width: 410px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .title_one {
+        font-size: 2.25rem;
+    }
+
+    .title_two {
+        font-size: 1.9rem;
+    }
+
+    .award-item {
+        width: 100%;
+        max-width: 370px;
+    }
+
+    .profile-card {
+        width: 100%;
+        max-width: 370px;
+        min-height: 500px;
+    }
+
+    .profile-card img {
+        width: 230px;
+        height: 230px;
+    }
+
+    .profile-card h3 {
+        font-size: 18px;
+    }
+
+    .profile-card .award-year {
+        font-size: 13px;
+    }
+
+    .profile-card p {
+        font-size: 14px;
+    }
+
+    .profile-card a {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .profile-card .button-placeholder {
+        height: 36px;
+    }
+
+    .about-title {
+        font-size: 1.6rem;
+    }
+
+    .about-text {
+        font-size: 0.95rem;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .nominate-button {
+        font-size: 12px !important;
+        padding: 8px 16px !important;
+    }
+
+    .read-more-btn {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+}

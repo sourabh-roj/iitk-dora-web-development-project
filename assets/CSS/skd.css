@@ -1,0 +1,656 @@
+:root {
+    --primary-color: #003366;
+    --accent-color: #e2b347;
+    --background-color: #f1f5fc;
+    --filter-bg-start: #4b6cb7;
+    --filter-bg-end: #182848;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background-color);
+    font-family: sans-serif;
+    color: var(--primary-color);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section {
+    padding: 20px 0;
+    position: relative;
+}
+
+/* Button Container Styles */
+.button-container {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+/* Nominate Button Styles - Adjusted for button element */
+.nominate-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-color);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    appearance: none; /* Removes default button styling */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.nominate-button:hover {
+    background-color: white;
+    color: var(--primary-color);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 51, 102, 0.2);
+}
+
+/* Removed :visited pseudo-class since it doesn't apply to buttons */
+.nominate-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.3); /* Added for accessibility */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.title_one {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 40px 0 55px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.title_one::after {
+    content: '';
+    display: block;
+    width: 160px;
+    height: 7px;
+    background: var(--accent-color);
+    margin: 10px auto 0;
+    border-radius: 4px;
+}
+
+.title_two {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 20px 0 20px;
+    position: relative;
+    letter-spacing: 1.2px;
+}
+
+.title_two::after {
+    content: '';
+    display: block;
+    width: 90px;
+    height: 4px;
+    background: var(--accent-color);
+    margin: 0px auto 0;
+    border-radius: 4px;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 460px;
+    min-height: 550px;
+    flex: 0 0 auto;
+    animation: fadeIn 0.6s ease-out forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+.profile-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.profile-card:nth-child(1) { animation-delay: 0.1s; }
+.profile-card:nth-child(2) { animation-delay: 0.2s; }
+.profile-card:nth-child(3) { animation-delay: 0.3s; }
+.profile-card:nth-child(4) { animation-delay: 0.4s; }
+.profile-card:nth-child(5) { animation-delay: 0.5s; }
+
+.profile-card img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    flex-shrink: 1;
+}
+
+.profile-card .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 80%;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.profile-card h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a237e;
+}
+
+.profile-card .batch {
+    color: #000;
+    background-color: #beccfa;
+    padding: 6px 10px;
+    border-radius: 6px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.profile-card .award-year {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.profile-card p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    flex-grow: 1;
+}
+
+.profile-card a {
+    display: inline-block;
+    font-size: 16px;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.profile-card a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.profile-card .button-placeholder {
+    height: 40px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.about-section {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.about-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-right: 15px;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    /* padding-bottom: 48px; */
+    color: var(--primary-color);
+    line-height: 1.7;
+}
+
+.eligibility-box {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-top: 20px;
+}
+
+.eligibility-heading {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.eligibility-text {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+}
+
+.info-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    width: 30%;
+    margin-left: 20px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(100% - 48px);
+    padding-bottom: 20px;
+}
+
+.info-section h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.committee-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.committee-list li {
+    font-size: 1.05rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 15px;
+    line-height: 1.7;
+}
+
+.committee-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 6px;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+}
+
+.award-scroll-wrapper {
+    width: 100%;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.award-scroll {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px 0;
+    max-width: 100%;
+    margin: 0 auto;
+    visibility: visible;
+}
+
+.award-scroll.single-card {
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.award-item {
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 460px;
+    justify-self: center;
+    visibility: visible;
+    opacity: 1;
+}
+
+.award-year-title {
+    display: none;
+}
+
+.filter-box {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    max-width: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+.filter-top {
+    display: none;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.search-bar input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    flex-grow: 1;
+    min-width: 200px;
+}
+
+.dropdown-filter {
+    display: none;
+}
+
+.quick-buttons {
+    margin-bottom: 15px;
+}
+
+.quick-buttons .years,
+.more-years {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.quick-buttons button {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.quick-buttons .year.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.more-years.hidden {
+    display: none;
+}
+
+.active-filters {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background: var(--primary-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.badge .remove {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.clear-all {
+    border: none;
+    background: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.result-count {
+    font-size: 0.95rem;
+    color: #333;
+    margin-top: 10px;
+    padding-left: 2px;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .title_one {
+        font-size: 2.5rem;
+        margin: 30px 0 40px;
+    }
+
+    .title_one::after {
+        width: 120px;
+        height: 5px;
+    }
+
+    .title_two {
+        font-size: 30px;
+        margin: 15px 0;
+    }
+
+    .title_two::after {
+        width: 70px;
+        height: 3px;
+    }
+
+    .profile-card img {
+        width: 290px;
+        height: 290px;
+    }
+
+    .profile-card h3 {
+        font-size: 18px;
+    }
+
+    .profile-card p {
+        font-size: 14px;
+    }
+
+    .profile-card a {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .about-title, .eligibility-heading {
+        font-size: 2rem;
+    }
+
+    .about-text, .eligibility-text {
+        font-size: 1rem;
+    }
+
+    .info-section {
+        width: 35%;
+    }
+
+    .award-scroll {
+        grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 15px 0;
+    }
+
+    .title_one {
+        font-size: 2rem;
+    }
+
+    .title_two {
+        font-size: 24px;
+    }
+
+    .profile-card {
+        min-height: 540px;
+    }
+
+    .profile-card img {
+        width: 270px;
+        height: 270px;
+    }
+
+    .about-section {
+        flex-direction: column;
+    }
+
+    .info-section {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+        height: auto;
+        min-height: 0;
+    }
+
+    .eligibility-box {
+        margin-bottom: 0;
+    }
+
+    .award-scroll {
+        grid-template-columns: 1fr;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .title_one {
+        font-size: 1.8rem;
+        margin: 20px 0 30px;
+    }
+
+    .title_one::after {
+        width: 100px;
+        height: 4px;
+    }
+
+    .title_two {
+        font-size: 20px;
+    }
+
+    .title_two::after {
+        width: 60px;
+        height: 2px;
+    }
+
+    .profile-card {
+        min-height: 450px;
+        padding: 10px;
+    }
+
+    .profile-card img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .profile-card h3 {
+        font-size: 16px;
+    }
+
+    .profile-card .batch {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    .profile-card .award-year {
+        font-size: 12px;
+    }
+
+    .profile-card p {
+        font-size: 12px;
+    }
+
+    .profile-card a {
+        font-size: 12px;
+        padding: 4px 10px;
+    }
+
+    .about-title, .eligibility-heading {
+        font-size: 1.5rem;
+    }
+
+    .about-text, .eligibility-text {
+        font-size: 0.9rem;
+    }
+
+    .info-section h3 {
+        font-size: 1.1rem;
+    }
+
+    .committee-list li {
+        font-size: 0.9rem;
+        padding-left: 10px;
+    }
+
+    .committee-list li::before {
+        font-size: 1rem;
+        top: 4px;
+    }
+
+    .filter-box {
+        padding: 10px;
+    }
+
+    .search-bar input {
+        min-width: 150px;
+        padding: 8px;
+    }
+
+    .quick-buttons button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .nominate-button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+}

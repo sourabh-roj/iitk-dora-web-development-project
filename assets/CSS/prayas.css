@@ -1,0 +1,261 @@
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html, body {
+    font-family: sans-serif;
+    background: #f9fafb;
+    color: #1a1a1a;
+    /* min-height: 100vh; */
+    /* font-size: 1.1rem; */
+  }
+  .prayas-container {
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 20px;
+    animation: fadeIn 0.8s ease-in;
+  }
+  .prayas-heading {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #003366;
+    padding: 35px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  .prayas-heading::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 5px;
+    background: #e2b347;
+    margin: 12px auto;
+    border-radius: 4px;
+  }
+  .prayas-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .prayas-card {
+    padding: 2rem;
+    background: linear-gradient(135deg, #ffffff, #f7f8fa);
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    border-left: 8px solid #0059b3;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .prayas-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+  }
+  .prayas-split {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  .prayas-img-container {
+    display: inline-block;
+    border: 3px solid #003087;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    line-height: 0;
+    animation: popIn 0.6s ease-in;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .prayas-img-container1 {
+    display: inline-block;
+    border-radius: 12px;
+    border: 3px solid #003087;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    line-height: 0;
+    animation: popIn 0.6s ease-in;
+    max-width: 58%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .prayas-img-container2 {
+    display: inline-block;
+    border-radius: 12px;
+    border: 3px solid #003087;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    line-height: 0;
+    animation: popIn 0.6s ease-in;
+    max-width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .prayas-img-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  .prayas-img-container2 img {
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  .prayas-img-container:hover ,.prayas-img-container1:hover {
+    transform: scale(1.05) ;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+
+  .prayas-img-container img:hover {
+    transform: scale(1.1);
+  }
+  .prayas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* gap: 2rem; */
+    /* margin: 2rem 0; */
+  }
+  .prayas-grid .prayas-img-container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .prayas-grid.prayas-grid-five .prayas-img-container:nth-child(5) {
+    grid-column: 1 / -1;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .prayas-info {
+    flex: 1;
+  }
+  .prayas-info h2 {
+    font-size: 1.8rem;
+    color: #003087;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    position: relative;
+    padding-bottom: 8px;
+  }
+  .prayas-info h2::after {
+    content: '';
+    display: block;
+    width: 75px;
+    height: 4px;
+    background: #e2b347;
+    position: absolute;
+    border-radius: 2px;
+  }
+  .prayas-info h4 {
+    font-size: 1.5rem;
+    color: #003087;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+  }
+  .prayas-info p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #333;
+  }
+  .prayas-info p strong {
+    color: #00356b;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes popIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px) ;
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) rotate(0);
+    }
+  }
+  @media (max-width: 768px) {
+    .prayas-container {
+      padding: 15px;
+    }
+    .prayas-heading {
+      font-size: 2.2rem;
+      padding: 25px 0;
+    }
+    .prayas-heading::after {
+      width: 160px;
+      height: 6px;
+    }
+    .prayas-card {
+      padding: 1.5rem;
+    }
+    .prayas-split {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .prayas-img-container {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    .prayas-grid {
+      grid-template-columns: 1fr;
+    }
+    .prayas-grid .prayas-img-container {
+      max-width: 300px;
+    }
+    .prayas-grid.prayas-grid-five .prayas-img-container:nth-child(5) {
+      grid-column: auto;
+      margin: 0 auto;
+    }
+    .prayas-info {
+      text-align: center;
+    }
+    .prayas-info h2::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  @media (max-width: 480px) {
+    .prayas-heading {
+      font-size: 1.8rem;
+      padding: 20px 0;
+    }
+    .prayas-heading::after {
+      width: 120px;
+      height: 5px;
+    }
+    .prayas-card {
+      padding: 1rem;
+    }
+    .prayas-img-container {
+      max-width: 200px;
+    }
+    .prayas-grid .prayas-img-container {
+      max-width: 200px;
+    }
+    .prayas-info h2 {
+      font-size: 1.4rem;
+    }
+    .prayas-info h4 {
+      font-size: 1.2rem;
+    }
+    .prayas-info p {
+      font-size: 1rem;
+    }
+  }

@@ -1,0 +1,105 @@
+/* Root variables used in footer */
+:root {
+    --iitk-blue: #002349;
+    --iitk-gold: #e2b347;
+}
+
+/* Ensure box-sizing is applied */
+* {
+    box-sizing: border-box;
+}
+
+/* Footer styles */
+footer {
+    background: var(--iitk-blue);
+    color: white;
+    padding: 1rem 0;
+    font-family: sans-serif;
+    margin-bottom: 0;
+}
+
+footer h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--iitk-gold);
+}
+
+footer a {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+footer a:hover {
+    color: var(--iitk-gold);
+}
+
+footer .social-icons a {
+    font-size: 1.4rem;
+    margin-right: 0.6rem;
+}
+
+footer address {
+    font-size: 0.9rem;
+    color: white;
+    font-style: normal;
+}
+
+footer .list-unstyled {
+    padding: 0;
+    list-style: none;
+}
+
+footer .list-unstyled li {
+    margin-bottom: 0.2rem;
+}
+
+footer hr {
+    border-color: rgba(255, 255, 255, 0.1);
+    margin: 0.8rem 0;
+}
+
+footer iframe {
+    border: 0;
+    width: 100%;
+    height: 200px;
+}
+
+/* Icon styles */
+footer .contact i {
+    margin-right: 0.3rem;
+    color: var(--iitk-gold);
+}
+
+/* Bottom section */
+footer .bottom {
+    margin: 0;
+    padding: 0;
+}
+
+footer .bottom p {
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    footer {
+        padding: 0.8rem 0;
+    }
+
+    footer h5 {
+        margin-bottom: 0.4rem;
+    }
+
+    footer .social-icons a {
+        margin-right: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    footer .social-icons a {
+        margin-right: 0.4rem;
+    }
+}

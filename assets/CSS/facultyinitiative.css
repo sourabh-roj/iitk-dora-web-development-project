@@ -1,0 +1,407 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: sans-serif;
+    background: #f7f8fa;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-weight: 500;
+}
+
+.page-container {
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 20px;
+    animation: fadeIn 0.8s ease-in;
+}
+
+/* Ensure main content expands and avoids footer overlap */
+.section {
+    flex-grow: 1;
+    padding-bottom: 60px; /* Space for footer */
+    min-height: calc(100vh - 100px); /* Adjust based on footer height */
+}
+
+/* Academic Page Specific Styles */
+.academic-page .main-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #003366;
+    padding: 40px 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.academic-page .main-heading::after {
+    content: '';
+    display: block;
+    width: 130px;
+    height: 4px;
+    background-color: #e2b347;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.intro-container {
+    background: rgba(226, 229, 233, 1);
+    padding: 1rem;
+    margin-bottom: 3rem;
+
+}
+
+.intro-container p {
+    font-size: 1.01rem;
+    line-height: 1.6;
+    color: #333;
+    padding-left: 90px;
+    padding-right: 70px;
+}
+
+.academic-page .sub-heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #003366;
+    padding: 20px 0 10px;
+    letter-spacing: 1.2px;
+}
+
+.academic-page .sub-heading::after {
+    content: '';
+    display: block;
+    width: 65px;
+    height: 4px;
+    background-color: #e2b347;
+    margin: 10px 10PX 0;
+    border-radius: 2px;
+}
+
+.news-card.horizontal {
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    border-left: 6px solid #1976d2;
+    text-align: left;
+    margin-bottom: 3rem;
+    overflow: auto;
+}
+
+.news-card.horizontal:hover {
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13);
+}
+
+.news-info {
+    margin: 0 auto;
+    text-align: left;
+}
+
+.sub-sub-heading {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #003366;
+    margin: 1.5rem 0 1rem;
+}
+
+.two-column-list ul {
+    column-count: 2;
+    column-gap: 2rem;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.two-column-list ul li {
+    font-size: 1.01rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.two-column-list ul li a {
+    color: #1976d2;
+    text-decoration: none;
+}
+
+.two-column-list ul li a:hover {
+    text-decoration: underline;
+    color: #e2b347;
+}
+
+.award-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.award-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.award-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.award-image {
+    width: 100%;
+    max-width: 180px;
+    height: 180px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.award-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    border: 2px solid #003366;
+}
+
+.award-content {
+    text-align: center;
+}
+
+.award-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #002147;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.award-recipient {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 0.3rem;
+}
+
+.award-department {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.page-footer {
+    background: linear-gradient(135deg, #002147 0%, #001b3a 100%);
+    color: white;
+    padding: 3rem 0 1rem;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.page-footer .page-container {
+    padding: 0 20px;
+}
+
+.page-footer .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.page-footer .footer-col {
+    flex: 1 1 200px;
+}
+
+.page-footer .footer-widget {
+    text-align: center;
+}
+
+.page-footer .footer-widget h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #e2b347;
+}
+
+.page-footer .footer-widget p,
+.page-footer .footer-widget a {
+    font-size: 0.9rem;
+    color: #d1d5db;
+    line-height: 1.5;
+}
+
+.page-footer .footer-widget a:hover {
+    color: #e2b347;
+    text-decoration: none;
+}
+
+.page-footer .footer-social {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+}
+
+.page-footer .footer-social li a {
+    font-size: 1.5rem;
+    color: #d1d5db;
+}
+
+.page-footer .footer-social li a:hover {
+    color: #e2b347;
+    transform: scale(1.2);
+}
+
+.page-footer .footer-social li a i.fa-linkedin {
+    color: #1985bc;
+}
+
+.page-footer .footer-social li a i.fa-youtube-play {
+    color: #e52d27;
+}
+
+.page-footer .footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.875rem;
+    color: #d1d5db;
+}
+
+.page-footer hr {
+    border: 1px dashed white;
+    margin: 0.5rem 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 900px) {
+    .page-container {
+        max-width: 98vw;
+    }
+
+    .section {
+        padding-bottom: 40px;
+    }
+
+    .intro-container {
+        margin-top: 60px; /* Adjust for smaller header */
+    }
+
+    .academic-page .main-heading {
+        font-size: 2.2rem;
+        padding: 30px 0 10px;
+    }
+
+    .academic-page .main-heading::after {
+        width: 150px;
+        height: 3px;
+    }
+
+    .academic-page .sub-heading {
+        font-size: 1.5rem;
+        padding: 15px 0 10px;
+    }
+
+    .academic-page .sub-heading::after {
+        width: 80px;
+        height: 3px;
+    }
+
+    .news-card.horizontal {
+        padding: 1rem 0.6rem;
+    }
+
+    .two-column-list ul {
+        column-count: 1;
+    }
+
+    .award-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .award-image {
+        max-width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 500px) {
+    .section {
+        padding-bottom: 30px;
+    }
+
+    .intro-container {
+        margin-top: 50px; /* Further adjust for mobile */
+    }
+
+    .academic-page .main-heading {
+        font-size: 1.8rem;
+        padding: 20px 0 10px;
+    }
+
+    .academic-page .main-heading::after {
+        width: 100px;
+        height: 2px;
+    }
+
+    .academic-page .sub-heading {
+        font-size: 1.3rem;
+        padding: 10px 0 5px;
+    }
+
+    .academic-page .sub-heading::after {
+        width: 60px;
+        height: 2px;
+    }
+
+    .news-card.horizontal {
+        padding: 0.7rem 0.2rem;
+    }
+
+    .sub-sub-heading {
+        font-size: 1.1rem;
+    }
+
+    .award-image {
+        max-width: 120px;
+        height: 120px;
+    }
+
+    .award-title {
+        font-size: 1rem;
+    }
+
+    .award-recipient {
+        font-size: 0.9rem;
+    }
+
+    .award-department {
+        font-size: 0.85rem;
+    }
+}

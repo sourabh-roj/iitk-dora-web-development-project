@@ -1,0 +1,180 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: sans-serif;
+    background: #f7f8fa;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.page-container {
+    width: 100%;
+    max-width: 1350px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Main Section Styles */
+.section {
+    flex-grow: 1;
+    padding-bottom: 20px;
+    min-height: calc(100vh - 100px);
+}
+
+/* Lecture Series Page Specific Styles */
+.lecture-series-page .heading-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.lecture-series-page .main-heading {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #003366;
+    padding: 10px 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.lecture-series-page .main-heading::after {
+    content: '';
+    display: block;
+    width: 130px;
+    height: 4px;
+    background-color: #e2b347;
+    margin: 10px auto 10px;
+    border-radius: 2px;
+}
+
+.news-card.horizontal {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-left: 6px solid #1976d2;
+    margin-bottom: 3rem;
+}
+
+.news-card.horizontal:hover {
+    box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+}
+
+/* Lecture Description and List Styles */
+.lecture-description {
+    margin-bottom: 2rem;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lecture-description p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+    text-align: left;
+}
+
+.lecture-list {
+    max-width: 100%;
+}
+
+.lecture-list ul {
+    list-style-type:disc;
+    padding-left: 1.5;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 2rem;
+}
+
+.lecture-list ul li {
+    margin-bottom: 0; /* Remove margin-bottom since grid handles spacing */
+}
+
+.lecture-list ul li a {
+    font-size: 1.1rem;
+    color: #3a7dbf;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.lecture-list ul li a:hover {
+    color: #e2b347;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .page-container {
+        max-width: 98vw;
+    }
+
+    .section {
+        padding-bottom: 40px;
+    }
+
+    .lecture-series-page .main-heading {
+        font-size: 2.2rem;
+        padding: 30px 0 15px;
+        margin-top: 30px;
+    }
+
+    .news-card.horizontal {
+        padding: 1.5rem;
+    }
+
+    .lecture-description p {
+        font-size: 1rem;
+    }
+
+    .lecture-list ul {
+        grid-template-columns: 1fr; /* Switch to single column on smaller screens */
+        gap: 1rem;
+    }
+
+    .lecture-list ul li a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .section {
+        padding-bottom: 30px;
+    }
+
+    .lecture-series-page .main-heading {
+        font-size: 1.5rem;
+        padding: 20px 0 10px;
+        margin-top: 20px;
+    }
+
+    .lecture-series-page .main-heading::after {
+        margin: 8px auto 20px;
+    }
+
+    .news-card.horizontal {
+        padding: 1rem;
+    }
+
+    .lecture-description p {
+        font-size: 0.95rem;
+    }
+
+    .lecture-list ul li a {
+        font-size: 0.95rem;
+    }
+}

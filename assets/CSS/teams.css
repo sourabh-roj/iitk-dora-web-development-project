@@ -1,0 +1,581 @@
+/* styles.css */
+:root {
+  --iitk-blue: #002349;
+  --iitk-red: #b91c1c;
+  --iitk-gold: #e2b347;
+  --accent-gold: #facc15;
+  --light-text: #ffffff;
+  --dark-text: #333333;
+  --hover-blue: #003366;
+  --header-link-bg: #f2f2f2;
+  --header-link-color: #333333;
+  --header-text-color: #002349;
+  --site-padding-x: 40px;
+  --nav-link-padding-x: 12px;
+  --nav-link-font-size: 0.95rem;
+  --light-gray: #f8fafc;
+  --dark-gray: #1f2937;
+  --text-dark: #111827;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  position: relative;
+  background: var(--light-gray);
+  color: var(--text-dark);
+  line-height: 1.8;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../imag/Img-2.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+/* Page-specific styles */
+.team-section,
+.media-section {
+  padding: 2rem 0;
+}
+
+
+.section-title {
+  color: var(--iitk-blue);
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--iitk-blue), var(--iitk-gold));
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+
+.section-title-1 {
+  color: var(--iitk-blue);
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 5px;
+  position: relative;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.section-title-1::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--iitk-blue), var(--iitk-gold));
+  border-radius: 2px;
+  margin-bottom: 1px;
+}
+
+.team-card {
+  border: none;
+  border-radius: 12px;
+  background: white;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex; /* Added for better internal layout control */
+  flex-direction: column; /* Stack content vertically */
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+.team-img-container {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* Creates a 1:1 aspect ratio square container */
+  overflow: hidden;
+}
+
+.team-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.team-card:hover .team-img {
+  transform: scale(1.05);
+}
+
+.team-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  color: white;
+  text-align: center;
+  z-index: 3;
+  align-items: flex-start;
+}
+
+
+
+.team-card:hover .team-overlay {
+  opacity: 1;
+}
+
+.team-responsibilities {
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: left;
+}
+
+.team-responsibilities ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.team-responsibilities li::before {
+  content: '•';
+  color: var(--iitk-gold);
+  margin-right: 8px;
+}
+
+.team-responsibilities p {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.team-designation {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(30, 58, 138, 0.7);
+  color: var(--iitk-gold);
+  padding: 0.75rem;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.1rem;
+  z-index: 2;
+}
+
+.team-info {
+  padding: 2rem;
+  text-align: center;
+  background: white;
+  flex-grow: 1; /* Allows info section to fill remaining space */
+  display: flex; /* Added for better vertical alignment of content */
+  flex-direction: column;
+  justify-content: space-between; /* Distributes content evenly */
+}
+
+.team-name {
+  color: var(--iitk-blue);
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-bottom: 0.25rem;
+}
+
+.team-contact {
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+.team-contact p {
+  margin: 0.4rem 0;
+}
+
+.team-contact a {
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.team-contact a:hover {
+  color: var(--iitk-red);
+}
+
+.btn-iitk {
+  background: var(--iitk-blue);
+  color: white;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 1rem;
+  border: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-iitk:hover {
+  background: var(--hover-blue);
+  transform: translateY(-2px);
+  color: var(--iitk-gold);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+#dean{
+margin-left: 19.5%;
+}
+
+.dean .row,
+.csr .row,
+.office .row,
+.media-section .row {
+  justify-content: center;
+}
+
+/* Side-by-side layout for specific team cards */
+.team-card.side-by-side {
+  flex-direction: row; /* Main change: default to row for larger screens */
+  align-items: stretch;
+}
+
+.team-card.side-by-side .team-img-container {
+  width: 50%;
+  padding-top: 0; /* Override square aspect ratio */
+  height: auto; /* Allow height to be determined by content or sibling */
+  min-height: 350px; /* Ensure a minimum height for the image container */
+}
+
+.team-card.side-by-side .team-img {
+  position: static; /* Image behaves normally within flex container */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-card.side-by-side .team-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.team-card.side-by-side .team-designation {
+  position: static; /* Designation inside info, not absolutely positioned */
+  background: transparent;
+  color: var(--iitk-gold);
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* View Deans Button Positioning */
+.view-deans-button {
+  text-align: right; 
+  margin-top: 0; 
+  margin-bottom: 35px; /* Ensure no extra bottom margin */
+  /* margin-left: 10px; */
+  max-width: 300px; /* Example: adjust as needed */
+  width: 100%; /* Ensures it takes available width up to max-width */
+}
+
+
+/* Adjust overlay for side-by-side cards */
+.team-card.side-by-side .team-overlay {
+  padding: 1rem;
+}
+
+.team-card.side-by-side .team-responsibilities {
+  font-size: 0.9rem;
+}
+
+/* Administration Section styles */
+.administration .row:first-child .team-card {
+  transform: scale(1);
+}
+
+.administration .row:first-child .team-card:hover {
+  transform: translateY(-8px);
+}
+
+.administration .row:last-child {
+  justify-content: center;
+}
+
+
+
+/* Animations */
+/* Basic fade-in and slide-up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Default state for cards and titles */
+.team-card, .section-title {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1), transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Animation trigger (when JS adds .animate) */
+.team-card.animate, .section-title.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: Use keyframes instead of transition */
+/*
+.team-card.animate, .section-title.animate {
+  animation: fadeInUp 0.6s forwards;
+}
+*/
+
+
+/* --- Media Queries --- */
+
+/* For screens up to 1200px (e.g., large tablets, smaller desktops) */
+@media (max-width: 1200px) {
+  .custom-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+/* For screens up to 991px (e.g., tablets, larger phones in landscape) */
+@media (max-width: 991px) {
+    .view-deans-button {
+    float: none;
+    width: auto; /* Let content determine width */
+    max-width: 250px; /* Keep max-width */
+    margin: 1rem auto; /* Center button on smaller screens */
+    display: block;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .team-name {
+    font-size: 1.4rem;
+  }
+
+  .team-contact {
+    font-size: 0.9rem;
+  }
+
+  .team-responsibilities {
+    font-size: 0.9rem;
+  }
+
+  .team-card.side-by-side {
+    flex-direction: column; /* Stack side-by-side cards vertically */
+  }
+
+  .team-card.side-by-side .team-img-container {
+    width: 100%;
+    padding-top: 75%; /* Maintain a 4:3 aspect ratio for image on mobile */
+    height: auto;
+    min-height: 0; /* Reset min-height */
+  }
+
+  .team-card.side-by-side .team-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .team-card.side-by-side .team-info {
+    width: 100%;
+    padding: 1.5rem; /* Ensure consistent padding */
+  }
+
+  .team-card.side-by-side .team-designation {
+    position: static; /* Revert to static for vertical layout */
+    background: transparent; /* Reset background if it was solid */
+    color: var(--iitk-blue); /* Adjust color if needed for visibility */
+    padding: 0;
+    margin-bottom: 0.5rem;
+  }
+
+   .dean .row {
+    flex-direction: column; /* Stack card and button vertically */
+    align-items: center; /* Center the stacked items */
+  }
+
+  .dean .col-lg-6.col-md-8, /* Target both card and button columns */
+  .dean .col-lg-3.col-md-4 {
+    width: 100%; /* Make them full width for stacking */
+    max-width: 450px; /* Or a suitable max-width for the card/button container */
+    margin-bottom: 1.5rem; /* Add spacing between stacked items */
+    /* Reset flex properties that are for side-by-side layout */
+    display: block; /* Revert to block display */
+    justify-content: unset;
+    align-items: unset;
+    text-align: center; /* Center content within these columns */
+  }
+
+  .team-card.side-by-side {
+    flex-direction: column; /* Ensure card stacks internally on smaller screens */
+  }
+
+  .view-deans-button {
+    text-align: center; /* Center button text when stacked */
+    margin: 1rem auto; /* Center the button itself with auto margins */
+  }
+
+  .custom-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Allow two columns if space permits */
+  }
+}
+
+/* For screens up to 767px (e.g., typical mobile phones) */
+@media (max-width: 767px) {
+  .team-img-container {
+    padding-top: 75%; /* Maintain a 4:3 aspect ratio for images */
+  }
+
+  .team-overlay {
+    padding: 1rem;
+  }
+
+  .team-responsibilities {
+    font-size: 0.85rem;
+  }
+
+  .team-info {
+    padding: 1.5rem;
+  }
+
+  .team-card.side-by-side .team-info {
+    padding: 1rem;
+  }
+
+  .dean .col-lg-3,
+  .dean .col-md-4 {
+    width: 90%; /* Larger width for single column on small mobiles */
+    max-width: 320px; /* Keep max width */
+  }
+
+  .custom-grid {
+    grid-template-columns: 1fr; /* Single column layout for small phones */
+    padding: 1rem 0; /* Adjust padding */
+    gap: 1.25rem; /* Smaller gap */
+  }
+
+  .team-card {
+    margin-bottom: 1.25rem; /* Smaller margin for stacked cards */
+  }
+}
+
+/* For screens up to 575px (e.g., smaller mobile phones) */
+@media (max-width: 575px) {
+  .team-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .btn-iitk {
+    width: 100%;
+    max-width: 220px;
+    font-size: 0.9rem;
+  }
+
+  .team-name {
+    font-size: 1.3rem;
+  }
+
+  /* Ensure image container aspect ratio is maintained */
+  .team-img-container,
+  .team-card.side-by-side .team-img-container {
+    padding-top: 66.66%; /* A more cinematic 3:2 aspect ratio, or keep 75% for 4:3 */
+  }
+}
+
+/* Further refinements for very small screens if necessary */
+@media (max-width: 400px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+  .team-name {
+    font-size: 1.2rem;
+  }
+  .team-info {
+    padding: 1rem;
+  }
+  .team-responsibilities {
+    font-size: 0.8rem;
+  }
+  .btn-iitk {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+  }
+}

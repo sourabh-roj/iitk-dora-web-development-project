@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSR Directory - IIT Kanpur</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --primary: #2a5d9f;
+      --accent: #e67e22;
+      --bg: #f8f9fa;
+      --card-bg: #fff;
+      --border: #e0e0e0;
+      --text: #222;
+      --muted: #666;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--bg);
+      margin: 0;
+      padding: 0;
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px 15px;
+    }
+
+    /* Header Section */
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .header h1 {
+      font-size: 2.8em;
+      color: var(--primary);
+      margin: 0.3em 0;
+    }
+    .header p {
+      color: var(--muted);
+      max-width: 800px;
+      margin: 0 auto 1.5em auto;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    /* Controls */
+    .controls {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    #search {
+      flex: 1 1 400px;
+      max-width: 500px;
+      padding: 12px 18px;
+      border: 2px solid var(--border);
+      border-radius: 30px;
+      font-size: 1em;
+      outline: none;
+    }
+    #search:focus {
+      border-color: var(--accent);
+    }
+    .filter-btn {
+      background: var(--card-bg);
+      border: 2px solid var(--border);
+      color: var(--text);
+      padding: 10px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: white;
+    }
+
+    /* Grid Layout */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 25px;
+      margin: 0 10px;
+    }
+
+    /* Company Card */
+    .company-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 18px rgba(42,93,159,0.07);
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: 1px solid var(--border);
+    }
+    .company-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 32px rgba(42,93,159,0.12);
+    }
+    .company-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    .company-logo {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      border-radius: 8px;
+      padding: 5px;
+      background: white;
+      box-shadow: 0 2px 8px rgba(60,60,60,0.08);
+    }
+    .company-name {
+      font-size: 1.15em;
+      font-weight: 600;
+      color: var(--primary);
+      margin: 0;
+      flex: 1;
+    }
+    .project-details {
+      color: var(--muted);
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
+    .project-details strong {
+      color: var(--text);
+    }
+
+    /* Pagination */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 40px;
+    }
+    .page-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .page-btn.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .company-card {
+        margin: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>Explore <span style="color:var(--accent)">CSR</span> Initiatives</h1>
+      <p>Corporate Social Responsibility (CSR) is the initiative taken by corporate giants to integrate social and environmental concerns in their business practices. Discover 60+ CSR partnerships at IIT Kanpur below.</p>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search companies or projects...">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="health">Healthcare</button>
+      <button class="filter-btn" data-filter="education">Education</button>
+      <button class="filter-btn" data-filter="energy">Energy</button>
+      <button class="filter-btn" data-filter="tech">Technology</button>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid" id="grid">
+      <!-- Cards injected via JS -->
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination" id="pagination"></div>
+  </div>
+
+  <script>
+    // Sample Data (Replace with your 60+ entries)
+    const companies = Array.from({ length: 60 }, (_, i) => ({
+      name: `Company ${i + 1}`,
+      logo: `https://picsum.photos/60/60?random=${i}`,
+      sector: ['health', 'education', 'energy', 'tech'][i % 4],
+      project: `Project details for Company ${i + 1} - Supporting ${['cancer research', 'STEM education', 'renewable energy', 'AI innovation'][i % 4]} at IIT Kanpur.`
+    }));
+
+    // DOM Elements
+    const grid = document.getElementById('grid');
+    const searchInput = document.getElementById('search');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const pagination = document.getElementById('pagination');
+
+    // Pagination Variables
+    let currentPage = 1;
+    const itemsPerPage = 12;
+
+    // Render Companies
+    function renderCompanies(filteredCompanies, page = 1) {
+      grid.innerHTML = '';
+      const start = (page - 1) * itemsPerPage;
+      const end = start + itemsPerPage;
+      filteredCompanies.slice(start, end).forEach(company => {
+        const card = document.createElement('div');
+        card.className = 'company-card';
+        card.innerHTML = `
+          <div class="company-header">
+            <img src="${company.logo}" class="company-logo" alt="${company.name} Logo">
+            <h3 class="company-name">${company.name}</h3>
+          </div>
+          <div class="project-details">
+            <strong>Sector:</strong> ${company.sector.charAt(0).toUpperCase() + company.sector.slice(1)}<br>
+            ${company.project}
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+      renderPagination(filteredCompanies.length);
+    }
+
+    // Render Pagination
+    function renderPagination(totalItems) {
+      pagination.innerHTML = '';
+      const pageCount = Math.ceil(totalItems / itemsPerPage);
+      for (let i = 1; i <= pageCount; i++) {
+        const btn = document.createElement('button');
+        btn.className = `page-btn ${i === currentPage ? 'active' : ''}`;
+        btn.textContent = i;
+        btn.onclick = () => {
+          currentPage = i;
+          filterCompanies();
+        };
+        pagination.appendChild(btn);
+      }
+    }
+
+    // Filter Functions
+    function filterCompanies() {
+      const searchTerm = searchInput.value.toLowerCase();
+      const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
+      
+      const filtered = companies.filter(company => {
+        const matchesSearch = company.name.toLowerCase().includes(searchTerm) || 
+                            company.project.toLowerCase().includes(searchTerm);
+        const matchesFilter = activeFilter === 'all' || company.sector === activeFilter;
+        return matchesSearch && matchesFilter;
+      });
+
+      renderCompanies(filtered, currentPage);
+    }
+
+    // Event Listeners
+    searchInput.addEventListener('input', filterCompanies);
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        currentPage = 1;
+        filterCompanies();
+      });
+    });
+
+    // Initial Render
+    renderCompanies(companies);
+  </script>
+</body>
+</html>

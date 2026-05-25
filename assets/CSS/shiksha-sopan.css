@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  font-family: sans-serif;
+  background: #f9fafb;
+  color: #1a1a1a;
+  /* min-height: 100vh; */
+  /* font-size: 1.1rem; */
+}
+.shiksha-container {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 20px;
+  animation: fadeIn 0.8s ease-in;
+}
+.shiksha-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #003366;
+  padding: 35px 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+.shiksha-heading::after {
+  content: '';
+  display: block;
+  width: 180px;
+  height: 8px;
+  background-color: #e2b347;
+  margin: 12px auto;
+  border-radius: 4px;
+}
+.shiksha-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.shiksha-card {
+  padding: 1.8rem;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-left: 6px solid #0059b3;
+  text-align: left;
+  transition: box-shadow 0.3s ease;
+}
+.shiksha-card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+.shiksha-img-container {
+  display: inline-block; /* Fit to image content */
+  border-radius: 12px;
+  border: 2px solid #003087;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  overflow: hidden;
+  line-height: 0; /* Remove extra vertical space */
+  animation: fadeInImage 0.6s ease-in; /* Add ease-in animation */
+}
+.shiksha-img-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Show full image */
+  border-radius: 8px;
+  display: block; /* Prevent inline spacing */
+  transition: transform 0.3s ease;
+}
+.shiksha-img-container img:hover {
+  transform: scale(1.05);
+}
+.shiksha-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.8rem;
+  margin: 1.8rem 0;
+}
+.shiksha-grid-2.vertiv-grid .shiksha-img-container:nth-child(5) {
+  grid-column: 1 / -1; /* Span full grid width for 5th image */
+  display: block;
+  margin: 0 auto; /* Center horizontally */
+  text-align: center; /* Fallback */
+}
+.shiksha-info {
+  margin: 0 auto;
+}
+.shiksha-info h2 {
+  font-size: 1.75rem;
+  color: #003087;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+  position: relative;
+  padding-bottom: 8px;
+}
+.shiksha-info h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #e2b347;
+  position: absolute;
+  border-radius: 2px;
+}
+.shiksha-info p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #333;
+}
+hr {
+  border: 0;
+  height: 2px;
+  background-color: #e0e0e0;
+  margin: 2rem 0;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInImage {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .shiksha-container {
+    padding: 15px;
+  }
+  .shiksha-heading {
+    font-size: 2.5rem;
+    padding: 25px 0;
+  }
+  .shiksha-heading::after {
+    width: 140px;
+    height: 6px;
+  }
+  .shiksha-card {
+    padding: 1.2rem;
+  }
+  .shiksha-img-container {
+    display: block; /* Center on smaller screens */
+    margin: 0 auto 1.2rem;
+    animation: fadeInImage 0.6s ease-in; /* Keep animation */
+  }
+  .shiksha-grid-2 {
+    grid-template-columns: 1fr; /* Single column */
+  }
+  .shiksha-grid-2.vertiv-grid .shiksha-img-container:nth-child(5) {
+    grid-column: auto; /* Reset for single column */
+    margin: 0 auto; /* Keep centered */
+  }
+  .shiksha-info {
+    text-align: center;
+  }
+  .shiksha-info h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 480px) {
+  .shiksha-heading {
+    font-size: 1.8rem;
+    padding: 20px 0;
+  }
+  .shiksha-heading::after {
+    width: 120px;
+    height: 5px;
+  }
+  .shiksha-card {
+    padding: 1rem;
+  }
+  .shiksha-img-container {
+    display: block;
+    margin: 0 auto 1.2rem;
+  }
+  .shiksha-info h2 {
+    font-size: 1.4rem;
+  }
+  .shiksha-info p {
+    font-size: 1rem;
+  }
+}

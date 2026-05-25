@@ -1,0 +1,817 @@
+/* *{
+  font-family: sans-serif;
+} */
+/* General Font Setting */
+body {
+  font-family: sans-serif; /* Changed to sans-serif only */
+  color: var(--dark-text);
+  background-color: #f8f9fa;
+  overflow-x: hidden; /* Prevent horizontal scroll issues */
+}
+
+:root {
+  --iitk-blue: #002349;
+  --iitk-gold: #e2b347;
+  --light-text: #ffffff;
+  --dark-text: #333333;
+  --hover-blue: #003366;
+  --header-link-bg: #f2f2f2;
+  --header-link-color: #333333;
+  --header-text-color: #002349;
+  --site-padding-x: 40px; /* Custom horizontal padding for full-width sections */
+
+  --mega-col-base-width: 250px; /* A good base width for each mega-menu column */
+}
+
+.scroll-container {
+  border: 1px solid #ccc;
+  padding: 10px 0; /* Adjusted padding for horizontal scroll */
+  margin-top: 0px;
+  height: 40px; /* Reduced height for a single line */
+  overflow: hidden; /* Crucial: Hides content outside the container */
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  white-space: nowrap; /* Ensures content stays on a single line */
+  position: relative; /* Needed for absolute positioning of content */
+  line-height: 20px; /* Adjust line height to vertically center text if needed */
+  display: flex; /* Use flexbox to vertically center the text */
+  align-items: center; /* Vertically centers the text */
+}
+
+.scroll-content {
+  font-size: 0.95rem;
+  color: #333;
+  display: inline-block; /* Allows animation on the content itself */
+  padding-left: 100%; /* Starts text completely off-screen to the right */
+  animation: marquee 40s linear infinite; /* Apply marquee animation */
+  /* Adjust the 20s duration for desired speed. Shorter time = faster speed. */
+}
+
+/* Keyframe animation for marquee effect */
+@keyframes marquee {
+  0% {
+    transform: translateX(0); /* Starts at its initial position */
+  }
+  100% {
+    transform: translateX(-100%); /* Moves left by its own width (and beyond) */
+  }
+}
+
+.blink {
+  margin-top: 20px; /* Space above the blink section (if not using mt-2) */
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #ff6161; /* Default color, can be changed */
+  animation: blink-animation 1s infinite; /* Apply blink animation */
+  margin-bottom: 20px; /* Add some space below the blink section */
+}
+
+.blink a {
+  color: #007bff; /* Blue for links, typical for Bootstrap */
+  text-decoration: none;
+}
+
+.blink a:hover {
+  text-decoration: underline;
+}
+
+@keyframes blink-animation {
+  0% {
+    opacity: 1; /* Fully visible */
+  }
+  50% {
+    opacity: 0.3; /* Completely invisible */
+  }
+  100% {
+    opacity: 1; /* Back to fully visible */
+  }
+}
+
+.text-center {
+  margin-top: 20px; /* Space above the text-center section (if not using mt-2) */
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 20px; /* Add some space below the text-center section before the slider */
+}
+
+.text-center a {
+  color: #007bff; /* Blue for links */
+  text-decoration: none;
+}
+
+.text-center a:hover {
+  text-decoration: underline;
+}
+
+/* Bootstrap margin utilities (if you're using Bootstrap) */
+/* If you're not including Bootstrap CSS, you'd need to define these: */
+.mt-2 {
+  margin-top: 0.5rem !important; /* Approximately 8px, common for Bootstrap's mt-2 */
+}
+.slider-container {
+  height: 500px;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(.77,0,.18,1);
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+  background-color: #fff;
+}
+
+/* Dots (Indicators) */
+.slider-dots {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.slider-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.18);
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.slider-dot.active {
+  background: #002349;
+  border-color: #e2b347;
+}
+
+/* Responsive adjustments for Slider - FIXES APPLIED HERE */
+@media (max-width: 991.98px) { /* Adjust for typical tablet/small laptop breakpoint */
+  .slider-container {
+    height: 380px; /* Reduced height for medium screens */
+  }
+  .slider-dot {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 767.98px) { /* Adjust for typical mobile breakpoint */
+  .slider-container {
+    height: 250px; /* Further reduced height for mobile */
+    border-radius: 4px; /* Slightly smaller border radius */
+  }
+  .slider-dot {
+    width: 10px;
+    height: 10px;
+    bottom: 15px; /* Adjust dot position for smaller height */
+  }
+  .slides img {
+    /* Ensure images still cover */
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 575.98px) { /* Adjust for very small mobile breakpoint */
+  .slider-container {
+    height: 180px; /* Even smaller height for very compact displays */
+  }
+  .slider-dot {
+    gap: 8px; /* Reduce gap between dots */
+  }
+}
+
+
+
+
+/* Specific adjustments for very small screens */
+@media (max-width: 575.98px) {
+    .scroll-container {
+      height: 35px; /* Slightly reduce height */
+      padding: 8px 0;
+    }
+    .scroll-content {
+      font-size: 0.85rem;
+    }
+    .blink {
+      font-size: 1rem;
+    }
+    .text-center {
+      font-size: 0.9rem;
+    }
+}
+
+
+.events-section {
+  background: #f8fafc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.events-section h2 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #1a237e;
+  letter-spacing: 0.02em;
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.event-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(60,60,60,0.05);
+  padding: 1rem;
+  transition: box-shadow 0.2s;
+}
+
+/* UPCOMING EVENT  */
+.event-item:hover {
+  box-shadow: 0 4px 16px rgba(60,60,60,0.10);
+}
+
+.event-item img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.event-title {
+  font-weight: 600;
+  color: #283593;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.event-date {
+  font-size: 0.95rem;
+  color: #616161;
+  margin-bottom: 0.35rem;
+}
+
+.event-desc {
+  font-size: 0.97rem;
+  color: #333;
+}
+
+/* Events Section responsive adjustments */
+@media (max-width: 767.98px) {
+  .events-section {
+    padding: 1rem;
+  }
+  .events-section h2 {
+    font-size: 1.3rem;
+  }
+  .event-item {
+    flex-direction: column; /* Stack image and text */
+    align-items: LEFT; /* Center content when stacked */
+    text-align: left;
+    padding: 0.8rem;
+  }
+  .event-item img {
+    margin-bottom: 10px; /* Add space below image */
+  }
+  .event-title {
+    font-size: 1rem;
+  }
+  .event-date, .event-desc {
+    font-size: 0.9rem;
+  }
+}
+
+/* ABOUT US AND NEWS SECTION  */
+body {
+    font-family: sans-serif; /* Changed to sans-serif only */
+    background: #f8fafc;
+    color: #232946;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.main-row {
+    display: flex;
+    align-items: cente;
+    width: 100%; /* Use 100% instead of 100vw to prevent overflow */
+    max-width: 100%;
+    gap: 10px; /* Space between About Us and News */
+    box-sizing: border-box;
+    padding: 45px var(--site-padding-x) 0 var(--site-padding-x); /* Use site padding */
+}
+
+.about-section {
+    flex: 0 0 60%;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(25, 118, 210, 0.08);
+    padding: 24px 32px;
+    border-left: 6px solid #1976d2;
+    min-width: 340px;
+    max-width: 1000px;
+    margin:0px;
+    margin-left: 55px;
+    box-sizing: border-box;
+    overflow: visible;
+    height: auto;
+    display:block;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    color: #02294f;
+    margin-bottom: 22px;
+    font-weight: 700;
+    display: flex;
+    align-items: LEFT;
+    gap: 10px;
+}
+.about-us{
+  padding-left: 0; /* Remove specific padding, let main-row handle it */
+}
+.about-section h2::before {
+    font-size: 1.3rem;
+}
+
+.about-intro {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.intro-image img {
+    border-radius: 8px;
+    width: 150px;
+    height: 190px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+    border: 2px solid #e3eafc;
+}
+
+.intro-text {
+    flex: 1;
+    font-size: 1.05rem;
+    color: #374151;
+}
+
+.about-section p {
+    line-height: 1.6;
+    margin-bottom: 12px;
+    font-size: 1.01rem;
+}
+
+.signature {
+    margin-top: 18px;
+    font-style: italic;
+    color: #1976d2;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border-top: 1px dashed #e3eafc;
+    padding-top: 8px;
+}
+
+/* NEWS SECTION */
+.news-section {
+    flex: 0 0 34%;
+    background: #f7faff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 18px 10px;
+    border: 1.5px solid #c7d0e0;
+    min-width: 260px;
+    max-width: 400px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    /* height: fit-content; is fine for the outer section */
+}
+
+.news-section h2 {
+    font-size: 1.15rem;
+    color: #000000;
+    background: #eaf2fb;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 2px solid #b4c9e7;
+    font-weight: 600;
+    padding: 8px 12px 6px 10px;
+    margin: -18px -10px 12px -10px;
+    letter-spacing: 1px;
+    width: calc(100% + 20px);
+}
+
+.news-marquee {
+    flex: 1; /* Allows it to take up available vertical space */
+    overflow: hidden; /* ABSOLUTELY ESSENTIAL: Hides content outside the fixed height */
+    position: relative; /* ABSOLUTELY ESSENTIAL: Establishes positioning context for absolute track */
+    height: 200px; /* Desktop fixed height */
+    cursor: pointer;
+    /* Add a min-height just in case flex:1 causes issues in certain contexts */
+    min-height: 100px; /* Ensures it's never too small even if flex glitches */
+}
+
+.news-marquee-track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    will-change: transform;
+}
+
+.news-item {
+    display: flex;
+    align-items: flex-start; /* Align content to the top */
+    gap: 10px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(25, 118, 210, 0.03);
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    border: 1px solid #e3eafc;
+    /* min-height should be adjusted on mobile, or removed if flexible height is needed */
+    /* min-height: 60px; Keep this for desktop for consistency */
+}
+
+.news-item img {
+    width: 80px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #dbeafe;
+    flex-shrink: 0; /* Prevents image from shrinking below its width/height */
+}
+
+.news-text {
+    color: #1976d2;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.3;
+    /* Ensure text doesn't cause overflow */
+    word-wrap: break-word; /* Allows long words to break */
+    overflow-wrap: break-word; /* Modern version of word-wrap */
+}
+
+.news-date {
+    font-size: 0.89rem;
+    color: #607d8b;
+    margin-top: 3px;
+    font-style: italic;
+    display: block;
+}
+
+.view-all-link {
+    display: inline-block;
+    margin-top: 10px; /* Adds space between marquee and link */
+    color: #1976d2;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.view-all-link:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    .news-section {
+        min-width: 90vw;
+        max-width: 98vw;
+        padding: 12px 3vw;
+    }
+    .news-marquee {
+        /* CRITICAL: Increase this height significantly to ensure items are visible */
+        height: 150px; /* Increased from 180px - try this or even higher */
+        /* You might need to experiment with this value. */
+        /* If a single news item is 100px tall, this ensures at least 2.5 items are available for display */
+    }
+    .news-item {
+        padding: 6px 8px;
+        margin-bottom: 8px;
+        min-height: unset; /* Allow items to reduce height if content is smaller */
+        align-items: center; /* Center vertically if image/text heights are very different */
+    }
+    .news-item img {
+        width: 50px; /* Further reduced image size */
+        height: 55px; /* Further reduced image size */
+    }
+    .news-text {
+        font-size: 0.8rem; /* Even smaller font */
+        line-height: 1.2;
+    }
+    .news-date {
+        font-size: 0.75rem; /* Even smaller font */
+    }
+}
+
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 900px) {
+    .main-row {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px var(--site-padding-x) 0 var(--site-padding-x); /* Apply site padding */
+        max-width: 100%; /* Ensure it doesn't overflow */
+    }
+    .about-section, .news-section {
+        flex: unset;
+        width: 100%; /* Take full width minus padding */
+        max-width: 100%;
+        min-width: unset;
+        margin: 0 auto 10px auto;
+        padding: 15px 20px; /* Adjust internal padding for smaller screens */
+    }
+
+    .about-intro {
+      flex-direction: column; /* Stack image and text in about section */
+      align-items: center;
+      text-align: center;
+    }
+    .intro-image {
+      margin-bottom: 10px;
+    }
+    .intro-image img {
+      width: 120px; /* Smaller image */
+      height: 150px;
+    }
+
+    .about-section h2 {
+      font-size: 1.7rem; /* Adjust heading size */
+      justify-content: center; /* Center heading */
+      margin-bottom: 15px;
+    }
+    .about-section p {
+      font-size: 0.95rem; /* Smaller paragraph text */
+    }
+
+    .news-section h2 {
+        font-size: 1.05rem; /* Smaller news heading */
+        padding: 8px 10px;
+        margin: -15px -10px 10px -10px; /* Adjust margin to fit new padding */
+    }
+
+    .news-marquee {
+        height: 250px; /* Increase height for more visible news items */
+    }
+    .news-item {
+      flex-direction: row; /* Keep news items side by side for better readability */
+      align-items: flex-start;
+      padding: 6px 8px;
+    }
+    .news-item img {
+      width: 60px; /* Smaller news image */
+      height: 70px;
+    }
+    .news-text {
+      font-size: 0.9rem;
+    }
+    .news-date {
+      font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+  .about-section h2 {
+    font-size: 1.5rem;
+  }
+  .about-section p {
+    font-size: 0.9rem;
+  }
+  .news-section h2 {
+    font-size: 0.95rem;
+  }
+}
+
+
+.stats-section {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  overflow: hidden;
+}
+
+.video-box {
+  background: #f0f0f0;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.ratio {
+  width: 100%;
+}
+
+.stats-section h4 {
+  color: #0158b5;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+
+}
+
+@media (max-width: 991.98px) {
+  .stats-section {
+    border-radius: 12px;
+  }
+  .video-box {
+    max-width: 100%;
+    min-height: 220px; /* Adjusted min-height for better video aspect ratio */
+  }
+}
+
+@media (max-width: 767.98px) {
+  .stats-section {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.09);
+  }
+  .video-box {
+    min-height: 180px; /* Further adjusted min-height for smaller screens */
+  }
+}
+
+.stats-card {
+  background: #03225c;
+  border: 2px solid #e2b347;
+  border-radius: 12px;
+  padding: 26px 12px 16px 12px;
+  text-align: center;
+  min-height: 90px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stats-card:hover {
+  box-shadow: 0 4px 24px rgba(226,179,71,0.13);
+  border-color: #ffd700;
+}
+
+.stats-number {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #e2b347;
+  display: block;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.stats-label {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Consolidated Stats Card Media Queries */
+@media (max-width: 991px) {
+  .stats-card {
+    padding: 18px 7px 10px 7px;
+    min-height: 70px;
+  }
+  .stats-number {
+    font-size: 1.6rem; /* Slightly larger for tablets */
+  }
+  .stats-label {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .stats-card {
+    padding: 15px 5px 8px 5px;
+    min-height: 60px;
+  }
+  .stats-number {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+  }
+  .stats-label {
+    font-size: 0.8rem;
+  }
+}
+
+.logo-scroll-section {
+  background: #fff;
+  padding: 32px 0 32px 0;
+  margin-top: 40px;
+  border-top: 1px solid #ececec;
+}
+
+.logo-scroll-title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 28px;
+  letter-spacing: 1px;
+  
+}
+
+.logo-scroll {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding: 10px 0;
+  background: #fff;
+}
+
+.logo-scroll__track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: logo-marquee 14s linear infinite;
+}
+
+.logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  min-height: 110px;
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  padding: 8px 10px;
+  margin-right: 18px;
+}
+
+.logo-item img {
+  max-height: 85px;
+  max-width: 140px;
+  object-fit: contain;
+  display: block;
+}
+
+@keyframes logo-marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 700px) {
+  .logo-item {
+    min-width: 70px;
+    min-height: 30px;
+    padding: 4px 6px;
+    margin-right: 8px;
+  }
+  .logo-item img {
+    max-height: 20px;
+    max-width: 40px;
+  }
+  .logo-scroll-title {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSR Directory - Scalable Design</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --primary: #2a5d9f;
+      --accent: #e67e22;
+      --bg: #f8f9fa;
+      --card-bg: #fff;
+      --border: #e0e0e0;
+      --text: #333;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--bg);
+      margin: 0;
+      padding: 0;
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header Section */
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .header h1 {
+      font-size: 2.4em;
+      color: var(--primary);
+      margin: 0.5em 0;
+    }
+
+    /* Controls */
+    .controls {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    #search {
+      flex: 1 1 400px;
+      max-width: 500px;
+      padding: 12px 20px;
+      border: 2px solid var(--border);
+      border-radius: 30px;
+      font-size: 1em;
+    }
+    #search:focus {
+      border-color: var(--accent);
+      outline: none;
+    }
+
+    /* Grid Layout */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+      margin: 0 10px;
+    }
+
+    /* Company Card */
+    .company-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(42,93,159,0.08);
+      transition: transform 0.2s;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    .company-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .card-header {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .company-logo {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      border-radius: 8px;
+      padding: 5px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .company-name {
+      font-size: 1.1em;
+      font-weight: 600;
+      color: var(--primary);
+      margin: 0;
+      flex: 1;
+    }
+
+    .card-body {
+      max-height: 65px;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      position: relative;
+    }
+    .card-body::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 30px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0), var(--card-bg));
+    }
+    .company-card.expanded .card-body {
+      max-height: 500px;
+    }
+    .company-card.expanded .card-body::after {
+      display: none;
+    }
+
+    .project-details {
+      color: var(--text);
+      font-size: 0.95em;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Sector Tags */
+    .sector-tag {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      font-size: 0.8em;
+      padding: 4px 10px;
+      border-radius: 15px;
+      margin-top: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .company-card {
+        margin: 0 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>CSR <span style="color:var(--accent)">Partners</span></h1>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search companies or projects...">
+    </div>
+
+    <!-- Grid -->
+    <div class="grid" id="grid">
+      <!-- Cards injected via JS -->
+    </div>
+  </div>
+
+  <script>
+    // Sample Data (Replace with your entries)
+    const companies = Array.from({ length: 60 }, (_, i) => ({
+      name: `Company ${i + 1}`,
+      logo: `https://picsum.photos/50/50?random=${i}`,
+      sector: ['Health', 'Education', 'Energy', 'Tech'][i % 4],
+      details: `Project details for Company ${i + 1} - ${i % 3 === 0 ? 
+        'Supporting cancer research through innovative diagnostic tools.' : 
+        i % 3 === 1 ? 'Developing educational games for STEM subjects.' : 
+        'Creating sustainable energy solutions through advanced analytics.'}`
+    }));
+
+    // DOM Elements
+    const grid = document.getElementById('grid');
+    const searchInput = document.getElementById('search');
+
+    // Render Companies
+    function renderCompanies() {
+      grid.innerHTML = '';
+      companies.forEach(company => {
+        const card = document.createElement('div');
+        card.className = 'company-card';
+        card.innerHTML = `
+          <div class="card-header">
+            <img src="${company.logo}" class="company-logo" alt="${company.name} Logo">
+            <h3 class="company-name">${company.name}</h3>
+          </div>
+          <div class="card-body">
+            <p class="project-details">${company.details}</p>
+            <span class="sector-tag">${company.sector}</span>
+          </div>
+        `;
+        card.addEventListener('click', function() {
+          this.classList.toggle('expanded');
+        });
+        grid.appendChild(card);
+      });
+    }
+
+    // Search Functionality
+    searchInput.addEventListener('input', function() {
+      const term = this.value.toLowerCase();
+      document.querySelectorAll('.company-card').forEach(card => {
+        const name = card.querySelector('.company-name').textContent.toLowerCase();
+        const details = card.querySelector('.project-details').textContent.toLowerCase();
+        card.style.display = (name.includes(term) || details.includes(term)) ? '' : 'none';
+      });
+    });
+
+    // Initial Render
+    renderCompanies();
+  </script>
+</body>
+</html>

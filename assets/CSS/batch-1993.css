@@ -1,0 +1,285 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: sans-serif;
+    background: #f7f8fa;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.page-container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Main Section Styles */
+.section {
+    flex-grow: 1;
+    padding-bottom: 60px;
+    min-height: calc(100vh - 100px);
+}
+
+/* Fellowship Page Specific Styles */
+.fellowship-page .heading-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.fellowship-page .main-heading {
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: #003366;
+    padding: 10px 0 2px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-left: 25%; /* Remove any margins that might interfere with centering */
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.fellowship-page .main-heading::after {
+    content: '';
+    display: block;
+    width: 130px;
+    height: 4px;
+    background-color: #e2b347;
+    margin: 10px auto 5px;
+    border-radius: 2px;
+}
+
+.fellowship-page .sub-heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #003366;
+    padding: 20px 0 10px;
+    letter-spacing: 1.2px;
+    margin-top: 2rem;
+    display: inline-block;
+}
+
+.fellowship-page .sub-heading::after {
+    content: '';
+    display: block;
+    width: 65px;
+    height: 4px;
+    background-color: #e2b347;
+    margin: 5px 0 0;
+    border-radius: 2px;
+}
+
+.news-card.horizontal {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-left: 6px solid #1976d2;
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+.news-card.horizontal:hover {
+    box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+}
+
+.news-info {
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Occupant Details Styles */
+.occupant-details {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    align-items: flex-start;
+}
+
+.occupant-image-wrapper {
+    flex: 0 0 200px;
+    text-align: center;
+}
+
+.occupant-image-wrapper img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #003366;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+}
+
+.occupant-info {
+    text-align: center;
+}
+
+.occupant-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #003366;
+    margin-bottom: 0.3rem;
+}
+
+.occupant-tenure {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.occupant-bio {
+    flex: 1;
+}
+
+.occupant-bio p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* Video Section Styles */
+.video-description {
+    margin-bottom: 2rem;
+}
+
+.video-description p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+    text-align: center;
+}
+
+.video-embed {
+    position: relative;
+    padding-bottom: 30%; /* Corrected to 16:9 aspect ratio */
+    height: 100px; /* Removed conflicting height */
+    overflow: hidden;
+    max-width: 70%;
+    margin: 0 auto; /* Center the video embed */
+    background: #000;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #003366;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .page-container {
+        max-width: 98vw;
+    }
+
+    .section {
+        padding-bottom: 40px;
+    }
+
+    .fellowship-page .main-heading {
+        font-size: 2.2rem;
+        padding: 30px 0 15px;
+        margin-top: 30px;
+    }
+
+    .fellowship-page .sub-heading {
+        font-size: 1.5rem;
+        padding: 15px 0 10px;
+    }
+
+    .news-card.horizontal {
+        padding: 1.5rem;
+    }
+
+    .occupant-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .occupant-image-wrapper {
+        flex: 0 0 auto;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .occupant-bio {
+        width: 100%;
+    }
+
+    .video-description p {
+        font-size: 1rem;
+    }
+
+    .video-embed {
+        max-width: 90%; /* Slightly wider on smaller screens for better visibility */
+        padding-bottom: 56.25%;
+    }
+}
+
+@media (max-width: 500px) {
+    .section {
+        padding-bottom: 30px;
+    }
+
+    .fellowship-page .main-heading {
+        font-size: 1.5rem;
+        padding: 20px 0 10px;
+        margin-top: 20px;
+    }
+
+    .fellowship-page .main-heading::after {
+        margin: 8px auto 20px;
+    }
+
+    .fellowship-page .sub-heading {
+        font-size: 1.3rem;
+        padding: 10px 0 5px;
+    }
+
+    .news-card.horizontal {
+        padding: 1rem;
+    }
+
+    .occupant-image-wrapper img {
+        max-width: 150px;
+    }
+
+    .occupant-name {
+        font-size: 1.2rem;
+    }
+
+    .occupant-tenure {
+        font-size: 0.9rem;
+    }
+
+    .occupant-bio p {
+        font-size: 1rem;
+    }
+
+    .video-description p {
+        font-size: 0.95rem;
+    }
+
+    .video-embed {
+        max-width: 100%; /* Full width on very small screens */
+        padding-bottom: 56.25%;
+    }
+}

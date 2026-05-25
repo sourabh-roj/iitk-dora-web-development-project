@@ -1,0 +1,242 @@
+/* Root variables used in footer */
+:root {
+    --iitk-blue: #002349;
+    --iitk-gold: #e2b347;
+    --light-gray: #d1d5db; /* For general text and links */
+    --input-bg: #444444; /* Background for the email input */
+    --input-border: #666666; /* Border for the email input */
+    --input-placeholder: #aaaaaa; /* Placeholder color */
+    --submit-button-bg: #d1d5db; /* Background for the submit button */
+    --submit-button-text: #000000; /* Text color for the submit button */
+}
+
+/* Ensure box-sizing is applied */
+* {
+    box-sizing: border-box;
+}
+
+/* Footer styles */
+footer {
+    background: var(--iitk-blue); /* Exact IITK Blue */
+    color: white;
+    padding: 2rem 0; /* Increased overall vertical padding for more height as per image */
+    font-family: sans-serif;
+    margin-bottom: 0; /* Ensure no bottom margin */
+}
+
+footer .container {
+    max-width: 1350px; /* Adjusted max-width for better content grouping, matches visual */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px; /* Standard horizontal padding */
+}
+
+footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px; /* Compensate for column padding */
+    margin-right: -15px; /* Compensate for column padding */
+}
+
+/* Specific row for the main content to control spacing */
+footer .footer-content-row {
+    align-items: flex-start; /* Align items to the top */
+    margin-bottom: 1.1rem; /* Increased space between main content and copyright as per image */
+}
+
+footer .col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Column specific top padding for visual alignment */
+footer .footer-column {
+    padding-top: 0; /* Resetting padding-top to manage it directly below heading */
+}
+
+/* Headings */
+footer h5 {
+    font-size: 1.15rem; /* Slightly reduced font size to match image */
+    font-weight: 600; /* Slightly bold as per image */
+    margin-bottom: 2rem; /* Increased margin below headings for better visual separation */
+    color: var(--iitk-gold); /* All headings are golden */
+    white-space: nowrap; /* Prevent headings from breaking onto multiple lines */
+}
+
+/* Text and Links */
+footer p {
+    font-size: 0.9rem;
+    color: var(--light-gray);
+    line-height: 1.6; /* Better readability */
+    margin-bottom: 0.5rem; /* Reduced space between paragraphs */
+}
+
+footer a {
+    color: var(--light-gray);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.9rem;
+    display: block; /* Make links block level for proper spacing */
+    margin-bottom: 0.5rem; /* Space between links */
+}
+
+footer a:hover {
+    color: var(--iitk-gold);
+}
+
+/* Contact Info Icons and text on same line */
+footer .contact p {
+    display: flex; /* Use flexbox for icon and text alignment */
+    align-items: center; /* Vertically align icon and text */
+    margin-bottom: 0.7rem; /* Spacing between email and phone lines */
+}
+
+footer .contact i {
+    margin-right: 0.8rem; /* Increased margin for icon */
+    color: white; /* Icons remain white */
+    font-size: 1.1rem; /* Slightly larger icon size to match visual */
+}
+
+/* Specific adjustments for "Contact Us" (first column) */
+footer .contact-us-address h5 {
+    /* No specific margin-bottom override needed if default H5 is good */
+}
+footer .contact-us-address p:first-of-type {
+    margin-top: -1rem; /* Adjust top margin for the first paragraph to pull it up closer to heading */
+}
+
+/* "Other links" adjustments */
+footer .other-links a {
+    margin-bottom: 0.5rem; /* Consistent spacing */
+}
+
+/* Subscribe Our Blog Section */
+footer .subscribe-section h5 {
+    margin-bottom: 1.5rem; /* Slightly less margin than main headings to pull form up */
+}
+
+footer .subscribe-form {
+    display: flex;
+    flex-direction: column; /* Stack input and button */
+    gap: 0.5rem; /* Reduced space between input and button for tighter grouping */
+    margin-top: 0; /* Remove top margin, rely on H5 margin-bottom */
+}
+
+footer .subscribe-form .email-input {
+    background-color: var(--input-bg); /* Darker background for input */
+    border: 1px solid var(--input-border); /* Subtle border */
+    padding: 0.6rem 1rem; /* Slightly reduced padding to match image more */
+    border-radius: 3px;
+    font-size: 0.9rem;
+    color: white;
+    width: 100%; /* Full width */
+    height: 40px; /* Fixed height for input to match image */
+}
+
+footer .subscribe-form .email-input::placeholder {
+    color: var(--input-placeholder); /* Placeholder color */
+}
+
+footer .subscribe-form .submit-button {
+    background-color: var(--submit-button-bg); /* Light gray from the image */
+    color: var(--submit-button-text); /* Black text for the button */
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Make button full width as per image */
+    max-width: 120px; /* Adjust max-width to match the visual width in the image */
+    align-self: flex-start; /* Align button to the left within its flex container */
+    margin-top: 0.5rem; /* Small margin to separate from input */
+    height: 40px; /* Fixed height for button to match input */
+}
+
+footer .subscribe-form .submit-button:hover {
+    background-color: var(--iitk-gold); /* Hover effect */
+    color: white;
+}
+
+
+/* Bottom section (Copyright) */
+footer .bottom-row {
+    border-top: 1px solid rgba(255, 255, 255, 0.278);
+    padding-top: 1.95rem; /* Space above copyright text */
+    text-align: center;
+    justify-content: center;
+}
+
+footer .bottom-row p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--light-gray);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) { /* Medium devices (tablets) */
+    footer .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 2.5rem; /* More space between stacked columns */
+    }
+    footer .footer-content-row {
+        margin-bottom: 2.5rem;
+    }
+    footer .subscribe-section {
+        order: 4; /* Ensures it stays in its column flow */
+    }
+    footer .col-md-3:nth-child(odd) { /* For 2-column layout, left column */
+        padding-right: 7.5px;
+    }
+    footer .col-md-3:nth-child(even) { /* For 2-column layout, right column */
+        padding-left: 7.5px;
+    }
+    footer .contact-us-address h5,
+    footer .contact-details h5,
+    footer .other-links h5,
+    footer .subscribe-section h5 {
+        margin-bottom: 1.5rem; /* Adjust heading margins */
+    }
+    footer .contact-us-address p:first-of-type {
+        margin-top: 0; /* Reset this adjustment for mobile */
+    }
+}
+
+@media (max-width: 767px) { /* Small devices (phones) */
+    footer .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: left; /* Keep left-aligned as per the original design for individual blocks */
+        margin-bottom: 2rem; /* Consistent spacing */
+        padding-left: 15px; /* Reset padding */
+        padding-right: 15px; /* Reset padding */
+    }
+    footer .col-md-3:nth-child(odd),
+    footer .col-md-3:nth-child(even) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    footer .footer-column h5 {
+        margin-bottom: 1rem; /* Reduce heading margin on small screens */
+    }
+    footer .contact-us-address p:first-of-type {
+        margin-top: 0; /* Ensure no negative margin */
+    }
+    footer .contact p {
+        justify-content: flex-start; /* Ensure contact details are left aligned */
+    }
+    footer .subscribe-form {
+        align-items: flex-start; /* Keep form elements left aligned */
+    }
+    footer .subscribe-form .submit-button {
+        width: 100%; /* Make button full width on mobile */
+        max-width: 200px; /* Limit max width for a better look */
+    }
+    footer .bottom-row {
+        padding-top: 1rem;
+        margin-top: 1rem;
+    }
+}

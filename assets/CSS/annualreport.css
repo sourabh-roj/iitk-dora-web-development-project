@@ -1,0 +1,168 @@
+/* General Body & Container Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.page-header {
+    color: black;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.page-header h1 {
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 3em;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.page-header::after {
+    content: '';
+    display: block;
+    width: 90px;
+    height: 4px;
+    background-color: var(--iitk-gold);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Introduction Section Styles */
+.intro-section {
+    background-color: #ffffff;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.intro-section p {
+    font-size: 1.1em;
+    max-width: 1300px;
+    margin: 3px auto;
+    text-align: left;
+    color: #18181e;
+}
+
+/* Magazine Issues Section */
+.big-section {
+    padding: 30px 0 60px;
+}
+
+.magazine-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 50px;
+    justify-content: center;
+}
+
+.magazine-item {
+    background-color: #ffffff;
+    border: 1px solid #02194d;
+    border-radius: 1px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 15px;
+    width: 85%;
+}
+
+.magazine-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.magazine-cover {
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+}
+
+.magazine-item h3 {
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 1.25em;
+    color: #003366;
+    margin: 0 15px 15px;
+}
+
+.download-btn {
+    display: inline-block;
+    background-color: #e5e5e5;
+    color: #042c45;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+}
+
+.download-btn:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+}
+
+/* Special Grid for Golden Jubilee Card */
+.special-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.magazine-item-special {
+    background-color: #ffffff;
+    border: 1px solid #02194d;
+    border-radius: 1px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 15px;
+    width: 40%; /* Adjust as needed for visual distinction */
+    max-width: 300px; /* Optional: sets a maximum width */
+}
+
+.magazine-item-special:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.magazine-cover-special {
+    width: 100%;
+    height: 350px; /* Taller than standard */
+    object-fit: contain; /* Shows full image, not cropped */
+    display: block;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+    background-color: #f9f9f9; /* Optional: for light background */
+}
+
+.magazine-item-special h3{
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 1.25em;
+    color: #003366;
+    margin: 0 15px 15px;
+}

@@ -1,0 +1,598 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: sans-serif;
+    background: #f7f8fa;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.page-container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Main Section Styles */
+.section {
+    flex-grow: 1;
+    padding-bottom: 60px;
+    min-height: calc(100vh - 100px);
+}
+
+/* Chair Page Specific Styles */
+.chair-page .main-heading {
+    text-align: center;
+    font-size: 1.70rem;
+    font-weight: 700;
+    color: #003366;
+    padding: 10px 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 10px; 
+    display: inline-block;
+}
+
+.chair-page .main-heading::after {
+    content: '';
+    display: block;
+    width: 130px;
+    height: 4px;
+    background-color: #e2b347;
+    margin: 10px auto 20px;
+    border-radius: 2px;
+}
+
+.chair-page .sub-heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #003366;
+    padding: 20px 0 10px;
+    letter-spacing: 1.2px;
+    margin-top: 2rem;
+    display: inline-block;
+}
+
+.chair-page .sub-heading::after {
+    content: '';
+    display: block;
+    width: 65px;
+    height: 4px;
+    background-color: #e2b347;
+    margin: 5px 0 0; /* Adjusted for closer alignment to subheading */
+    border-radius: 2px;
+}
+
+.news-card.horizontal {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-left: 6px solid #1976d2;
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+.news-card.horizontal:hover {
+    box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+}
+
+.news-info {
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Chair Details Styles */
+.chair-details {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.chair-image-wrapper {
+    flex: 0 0 350px;
+}
+
+.chair-image-wrapper img {/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: sans-serif;
+    background: #f7f8fa;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.page-container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Main Section Styles */
+.section {
+    flex-grow: 1;
+    padding-bottom: 60px;
+    min-height: calc(100vh - 100px);
+}
+
+/* Chair Page Specific Styles */
+.chair-page .main-heading {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #003366;
+    padding: 10px 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 10px;
+    display: inline-block;
+    white-space: nowrap; /* Ensures the heading stays in one line */
+}
+
+.chair-page .main-heading::after {
+    content: '';
+    display: block;
+    width: 130px;
+    height: 4px;
+    background-color: #e2b347;
+    margin: 10px auto 30px; /* Added margin-bottom for space after underline */
+    border-radius: 2px;
+}
+
+.chair-page .sub-heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #003366;
+    padding: 20px 0 10px;
+    letter-spacing: 1.2px;
+    margin-top: 2rem;
+    display: inline-block;
+}
+
+.chair-page .sub-heading::after {
+    content: '';
+    display: block;
+    width: 65px;
+    height: 4px;
+    background-color: #e2b347;
+    margin: 5px 0 0;
+    border-radius: 2px;
+}
+
+.news-card.horizontal {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-left: 6px solid #1976d2;
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+.news-card.horizontal:hover {
+    box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+}
+
+.news-info {
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Chair Details Styles */
+.chair-details {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.chair-image-wrapper {
+    flex: 0 0 350px;
+}
+
+.chair-image-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #003366;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.chair-purpose {
+    flex: 1;
+}
+
+.chair-purpose p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.chair-activities {
+    width: 100%;
+}
+
+.chair-activities p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #003366;
+    margin-bottom: 1rem;
+}
+
+.chair-activities ul {
+    list-style-type: disc;
+    padding-left: 25px;
+}
+
+.chair-activities ul li {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 0.75rem;
+}
+
+/* Occupant Details Styles */
+.occupant-details {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    align-items: flex-start;
+}
+
+.occupant-image-wrapper {
+    flex: 0 0 200px;
+    text-align: center;
+}
+
+.occupant-image-wrapper img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #003366;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+}
+
+.occupant-info {
+    text-align: center;
+}
+
+.occupant-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #003366;
+    margin-bottom: 0.3rem;
+}
+
+.occupant-tenure {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.occupant-bio {
+    flex: 1;
+}
+
+.occupant-bio p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .page-container {
+        max-width: 98vw;
+    }
+
+    .section {
+        padding-bottom: 40px;
+    }
+
+    .chair-page .main-heading {
+        font-size: 2.2rem;
+        padding: 30px 0 15px;
+        margin-top: 30px;
+    }
+
+    .chair-page .sub-heading {
+        font-size: 1.5rem;
+        padding: 15px 0 10px;
+    }
+
+    .news-card.horizontal {
+        padding: 1.5rem;
+    }
+
+    .chair-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .chair-image-wrapper {
+        flex: 0 0 auto;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .chair-purpose {
+        width: 100%;
+    }
+
+    .occupant-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .occupant-image-wrapper {
+        flex: 0 0 auto;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .occupant-bio {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .section {
+        padding-bottom: 30px;
+    }
+
+    .chair-page .main-heading {
+        font-size: 1.5rem; /* Adjusted to ensure it fits in one line on smaller screens */
+        padding: 20px 0 10px;
+        margin-top: 20px;
+    }
+
+    .chair-page .main-heading::after {
+        margin: 8px auto 20px; /* Adjusted for smaller screens */
+    }
+
+    .chair-page .sub-heading {
+        font-size: 1.3rem;
+        padding: 10px 0 5px;
+    }
+
+    .news-card.horizontal {
+        padding: 1rem;
+    }
+
+    .chair-image-wrapper {
+        max-width: 250px;
+    }
+
+    .chair-purpose p,
+    .chair-activities p,
+    .chair-activities ul li,
+    .occupant-bio p {
+        font-size: 1rem;
+    }
+
+    .occupant-image-wrapper img {
+        max-width: 150px;
+    }
+
+    .occupant-name {
+        font-size: 1.2rem;
+    }
+
+    .occupant-tenure {
+        font-size: 0.9rem;
+    }
+}
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #003366;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.chair-purpose {
+    flex: 1;
+}
+
+.chair-purpose p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.chair-activities {
+    width: 100%;
+}
+
+.chair-activities p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #003366;
+    margin-bottom: 1rem;
+}
+
+.chair-activities ul {
+    list-style-type: disc;
+    padding-left: 25px;
+}
+
+.chair-activities ul li {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 0.75rem;
+}
+
+/* Occupant Details Styles */
+.occupant-details {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    align-items: flex-start;
+}
+
+.occupant-image-wrapper {
+    flex: 0 0 200px;
+    text-align: center;
+}
+
+.occupant-image-wrapper img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #003366;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+}
+
+.occupant-info {
+    text-align: center;
+}
+
+.occupant-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #003366;
+    margin-bottom: 0.3rem;
+}
+
+.occupant-tenure {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.occupant-bio {
+    flex: 1;
+}
+
+.occupant-bio p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .page-container {
+        max-width: 98vw;
+    }
+
+    .section {
+        padding-bottom: 40px;
+    }
+
+    .chair-page .main-heading {
+        font-size: 2.2rem;
+        padding: 30px 0 15px;
+        margin-top: 30px; /* Adjusted for smaller screens */
+    }
+
+    .chair-page .sub-heading {
+        font-size: 1.5rem;
+        padding: 15px 0 10px;
+    }
+
+    .news-card.horizontal {
+        padding: 1.5rem;
+    }
+
+    .chair-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .chair-image-wrapper {
+        flex: 0 0 auto;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .chair-purpose {
+        width: 100%;
+    }
+
+    .occupant-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .occupant-image-wrapper {
+        flex: 0 0 auto;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .occupant-bio {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .section {
+        padding-bottom: 30px;
+    }
+
+    .chair-page .main-heading {
+        font-size: 1.8rem;
+        padding: 20px 0 10px;
+        margin-top: 20px; /* Further adjusted for mobile */
+    }
+
+    .chair-page .sub-heading {
+        font-size: 1.3rem;
+        padding: 10px 0 5px;
+    }
+
+    .news-card.horizontal {
+        padding: 1rem;
+    }
+
+    .chair-image-wrapper {
+        max-width: 250px;
+    }
+
+    .chair-purpose p,
+    .chair-activities p,
+    .chair-activities ul li,
+    .occupant-bio p {
+        font-size: 1rem;
+    }
+
+    .occupant-image-wrapper img {
+        max-width: 150px;
+    }
+
+    .occupant-name {
+        font-size: 1.2rem;
+    }
+
+    .occupant-tenure {
+        font-size: 0.9rem;
+    }
+}

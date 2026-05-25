@@ -1,0 +1,196 @@
+
+:root {
+    --iitk-blue: #002349; /* Assuming this is your primary blue */
+    --iitk-gold: #e2b347; /* Assuming this is your primary gold */
+    --light-gray-bg: #f4f7f6;
+    --card-bg: #f9f9f9;
+    --border-color: #e0e0e0;
+    --text-color-primary: #333;
+    --text-color-secondary: #555;
+    --link-color: #007bff;
+    --shadow-light: rgba(0, 0, 0, 0.05);
+    --shadow-medium: rgba(0, 0, 0, 0.08);
+    --shadow-strong: rgba(0, 0, 0, 0.1);
+}
+
+/* Base styles for the career page content to avoid global conflicts */
+.career-page-content {
+    font-family: sans-serif; 
+    line-height: 1.6;
+    color: var(--text-color-primary);
+    background-color: var(--light-gray-bg);
+    padding-bottom: 30px; 
+    padding-top:20px;
+    
+    
+}
+
+.career-page-content .container {
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 30px; /* Increased padding for better spacing */
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px var(--shadow-medium); /* Slightly stronger initial shadow */
+    border-radius: 12px; /* More rounded corners */
+    margin-top: 40px;
+}
+
+/* Section Title and Application Info */
+.career-page-content .section-title {
+    text-align: center;
+    color: var(--iitk-blue);
+    font-size: 2.8em; /* Slightly larger title */
+    margin-bottom: 25px;
+    font-weight: 700;
+    position: relative; /* For the underline effect */
+    padding-bottom: 10px;
+}
+
+.career-page-content .section-title::after {
+    content: '';
+    display: block;
+    width: 90px; /* Short underline */
+    height: 4px;
+    background-color: var(--iitk-gold); /* Gold accent for the underline */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+
+.career-page-content .apply-info {
+    text-align: center;
+    font-size: 1.15em;
+    margin-bottom: 40px; /* More space below info */
+    color: var(--text-color-secondary);
+    font-weight: 500;
+}
+
+.career-page-content .apply-info a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.career-page-content .apply-info a:hover {
+    color: var(--iitk-gold); /* Hover to IITK Gold */
+    text-decoration: underline;
+}
+
+/* Job Listings Grid */
+.career-page-content .job-listings {
+    display: grid;
+    /* Forces 3 columns on larger screens */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; /* Consistent gap */
+    justify-content: center;
+}
+   
+
+/* Individual Job Card Styling */
+.career-page-content .job-card {
+    background: linear-gradient(145deg, var(--card-bg), #f0f0f0); /* Subtle gradient */
+    border: 1px solid var(--border-color);
+    border-radius: 10px; /* Slightly more rounded */
+    padding: 25px;
+    box-shadow: 0 3px 8px var(--shadow-light); /* Softer initial shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex; /* Flexbox for internal content */
+    flex-direction: column;
+}
+
+.career-page-content .job-card:hover {
+    transform: translateY(-8px); /* More pronounced lift on hover */
+    box-shadow: 0 10px 5px var(--iitk-blue); /*stronger shadow on hover*/
+}
+
+.career-page-content .job-title {
+    color: var(--iitk-blue);
+    font-size: 1.9em; /* Slightly larger job titles */
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--iitk-gold); /* Gold underline for titles */
+    padding-bottom: 10px;
+    flex-shrink: 0; /* Prevent title from shrinking */
+}
+
+.career-page-content .job-details {
+    flex-grow: 1; /* Allows details to take available space */
+}
+
+.career-page-content .job-details p {
+    margin-bottom: 10px; /* More spacing for paragraphs */
+    font-size: 0.98em;
+    line-height: 1.5;
+}
+
+.career-page-content .job-details strong {
+    color: #444; /* Slightly darker strong text */
+    font-weight: 600;
+}
+
+.career-page-content .job-details ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.career-page-content .job-details ul li {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="%23e2b347"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>') no-repeat left 3px; /* Slightly larger, gold checkmark */
+    background-size: 18px;
+    padding-left: 30px; /* Adjust padding for new icon size */
+    margin-bottom: 10px; /* More spacing between list items */
+    font-size: 0.95em;
+    color: var(--text-color-secondary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .career-page-content .container {
+        margin: 30px auto;
+        padding: 25px;
+    }
+    .career-page-content .section-title {
+        font-size: 2.4em;
+    }
+    .career-page-content .job-title {
+        font-size: 1.7em;
+    }
+}
+
+@media (max-width: 768px) {
+    .career-page-content .job-listings {
+        grid-template-columns: 1fr; /* Stack cards on smaller screens */
+        gap: 25px;
+    }
+    .career-page-content .container {
+        margin: 20px auto;
+        padding: 20px;
+    }
+    .career-page-content .section-title {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    .career-page-content .apply-info {
+        font-size: 1.05em;
+        margin-bottom: 30px;
+    }
+    .career-page-content .job-title {
+        font-size: 1.6em;
+    }
+    .career-page-content .job-details p,
+    .career-page-content .job-details ul li {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 576px) {
+    .career-page-content .container {
+        padding: 15px;
+    }
+    .career-page-content .section-title {
+        font-size: 1.8em;
+    }
+    .career-page-content .job-title {
+        font-size: 1.4em;
+    }
+}
