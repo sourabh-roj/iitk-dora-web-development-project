@@ -512,7 +512,7 @@
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Custom JS -->
-<script src="/dora/Internship/assets/JS/teams.js"></script>
+<script src="assets/JS/teams.js"></script>
 
 
 <?php include 'footer.php'; ?>
