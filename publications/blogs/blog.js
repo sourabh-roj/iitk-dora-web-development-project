@@ -6,9 +6,9 @@ const blogPosts = [
     date: "Feb. 12, 2024",
     excerpt:
       "Mr. Anil Bansal, an eminent alumnus, recipient of the Distinguished Alumnus Award 2023 and one of the top benefactors of IITK, is a serial entrepreneur currently serving as The President at First National Realty Management.",
-    image: "/dora/internship/assets/imag/blogs_im/anil-bansal-24.jpg",
+    image: "../../assets/imag/blogs_im/anil-bansal-24.jpg",
     category: "alumni-interview",
-    link: "/DORA/Internship/publications/blogs/anil-bansal.php",
+    link: "../../publications/blogs/anil-bansal.php",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const blogPosts = [
     date: "May 1, 2023",
     excerpt:
       "Prof. Deepak Dhar, recipient of Padma Bhushan 2023 and IITK Distinguished Alumnus Award 2022, is a highly acclaimed theoretical physicist of India.",
-    image: "/dora/internship/assets/imag/blogs_im/alum-interview.jpg",
+    image: "../../assets/imag/blogs_im/alum-interview.jpg",
     category: "alumni-interview",
   },
   {
@@ -26,7 +26,7 @@ const blogPosts = [
     author: "(BT/CHE/1976)",
     date: "Sep 15, 2021",
     excerpt: "In an interview with the DoRA Office, Mr. Sudhakar Kesavan talks about his career growth",
-    image: "/dora/internship/assets/imag/blogs_im/alum-interview1.jpg",
+    image: "../../assets/imag/blogs_im/alum-interview1.jpg",
     category: "alumni-interview",
   },
   {
@@ -36,7 +36,7 @@ const blogPosts = [
     date: "Apr 26, 2021",
     excerpt:
       "Mr. Muktesh Pant, born in the Kumaon hills of Nainital in 1954, is the son of a famous Hindi story and novel writer, Smt. Gaura Pant 'Shivani', and Shri Sukdeo Pant, a government servant.",
-    image: "/dora/internship/assets/imag/blogs_im/alum-interview2.jpg",
+    image: "../../assets/imag/blogs_im/alum-interview2.jpg",
     category: "alumni-interview",
   },
   {
@@ -46,7 +46,7 @@ const blogPosts = [
     date: "January 21, 2021",
     excerpt:
       "Dr. Jyotirmayee Dash is a professor at the Department of Organic Chemistry at Indian Association for the Cultivation of Science, Jadavpur, Kolkata. She is the recipient of the prestigious Shanti Swarup Bhatnagar Prize 2020",
-    image: "/dora/internship/assets/imag/blogs_im/ai.jpg",
+    image: "../../assets/imag/blogs_im/ai.jpg",
     category: "alumni-interview",
   },
   {
@@ -56,7 +56,7 @@ const blogPosts = [
     date: "November 20, 2023",
     excerpt:
       "IITK Alumnus and self-taught Visual Artist, Anshul Roy talks about his inspiring journey from science to art, the challenges that came and the efforts he took to overcome those.",
-    image: "/dora/internship/assets/imag/blogs_im/anshul-f.png",
+    image: "../../assets/imag/blogs_im/anshul-f.png",
     category: "offbeat",
   },
   {
@@ -66,7 +66,7 @@ const blogPosts = [
     date: "October 10, 2022",
     excerpt:
       'Soumyadeep Mukherjee is a PhD student at IITK. His photo, A Year in the Sun, won the Astronomy Photographer of the Year competition in the "Our Sun" category, held by Royal Museums Greenwich. He is the first Indian to win an award in the competition.',
-    image: "/dora/internship/assets/imag/blogs_im/of1.jpg",
+    image: "../../assets/imag/blogs_im/of1.jpg",
     category: "offbeat",
   },
   {
@@ -76,7 +76,7 @@ const blogPosts = [
     date: "January 7, 2022",
     excerpt:
       "'I went to the Indian Institute of Technology, Kanpur'.'Oh my God'. I don't understand why you want to give this up and pursue music!, exclaimed the consular officer interviewing me for a F-1 visa at the US Embassy in New Delhi.",
-    image: "/dora/internship/assets/imag/blogs_im/of2.jpg",
+    image: "../../assets/imag/blogs_im/of2.jpg",
     category: "offbeat",
   },
   {
@@ -86,7 +86,7 @@ const blogPosts = [
     date: "April 16, 2021",
     excerpt:
       "Art for me is about self-expression. At the same time, as a socially conscious artist, I like to depict thehuman condition, with all its banalities, compulsions and predicaments.",
-    image: "/dora/internship/assets/imag/blogs_im/of3.jpg",
+    image: "../../assets/imag/blogs_im/of3.jpg",
     category: "offbeat",
   },
   {
@@ -95,9 +95,9 @@ const blogPosts = [
     author: "(BT/ME/1984)",
     date: "December, 2021",
     excerpt: "Dr. Dev Joneja on the motivation behind giving back to IITK.",
-    image: "/dora/internship/assets/imag/blogs_im/dev.png",
+    image: "../../assets/imag/blogs_im/dev.png",
     category: "giving-back",
-    link: "/DORA/Internship/publications/blogs/dev-joneja.php",
+    link: "../../publications/blogs/dev-joneja.php",
   },
   {
     id: 11,
@@ -105,7 +105,7 @@ const blogPosts = [
     author: "",
     date: "November, 2023",
     excerpt: "Ms. Martha Carreno - Inauguration of Ranjit Singh Rozi Shiksha Kendra at IITK",
-    image: "/dora/internship/assets/imag/blogs_im/givingback2.jpeg",
+    image: "../../assets/imag/blogs_im/givingback2.jpeg",
     category: "giving-back",
   },
   {
@@ -114,7 +114,7 @@ const blogPosts = [
     author: "(MT/EE/1969)",
     date: "October, 2023",
     excerpt: "Mr. NR Narayana Murthy, IITK alumnus, talks about why giving back is important.",
-    image: "/dora/internship/assets/imag/blogs_im/givingback3.jpeg",
+    image: "../../assets/imag/blogs_im/givingback3.jpeg",
     category: "giving-back",
   },
   {
@@ -124,7 +124,7 @@ const blogPosts = [
     date: "September, 2021",
     excerpt:
       "Prof. Chandralekha Singh and Prof. Jeremy Levy talk about their motivation behind donating toward the construction of the New Opportunity School building at IIT Kanpur.",
-    image: "/dora/internship/assets/imag/blogs_im/givingback1.jpg",
+    image: "../../assets/imag/blogs_im/givingback1.jpg",
     category: "giving-back",
   },
   {
@@ -134,7 +134,7 @@ const blogPosts = [
     date: "September, 2021",
     excerpt:
       "Mr. Muktesh Pant talks about the influence of his Mother on his life, setting up a Center in his Mother's name at IITK, and why giving back is important to him.",
-    image: "/dora/internship/assets/imag/blogs_im/givingback5.png",
+    image: "../../assets/imag/blogs_im/givingback5.png",
     category: "giving-back",
   },
   {
@@ -143,7 +143,7 @@ const blogPosts = [
     author: "(BT/CSE/1990)",
     date: "August, 2021",
     excerpt: "Mr. Ranodeb Roy talks about his contributions to IIT Kanpur, and reasons for his generosity.",
-    image: "/dora/internship/assets/imag/blogs_im/givingback4.jpeg",
+    image: "../../assets/imag/blogs_im/givingback4.jpeg",
     category: "giving-back",
   },
   {
@@ -153,7 +153,7 @@ const blogPosts = [
     date: "October 28, 2020",
     excerpt:
       "In mid-March, I was due to finish my Ph.D. thesis and submit it by May-end. Instead, I found myself living in isolation at my home after the campus closed down.",
-    image: "/dora/internship/assets/imag/blogs_im/covid&social.jpg",
+    image: "../../assets/imag/blogs_im/covid&social.jpg",
     category: "mental-wellbeing",
   },
   {
@@ -163,7 +163,7 @@ const blogPosts = [
     date: "August 10, 2020",
     excerpt:
       "Dr. Arvind Krishna shares with us his most preferred leisure activity - reading. He talks about his most favorite book and how it has influenced him.",
-    image: "/dora/internship/assets/imag/blogs_im/leisure.jpg",
+    image: "../../assets/imag/blogs_im/leisure.jpg",
     category: "in-leisure-time",
   },
   {
@@ -173,7 +173,7 @@ const blogPosts = [
     date: "August 10, 2020",
     excerpt:
       "This is an interview of Ms. Nisha Mehta, who overcame many obstacles in her life, and went on to achieve academic success, and became an inspiration to many others.",
-    image: "/dora/internship/assets/imag/blogs_im/inspiration.jpg",
+    image: "../../assets/imag/blogs_im/inspiration.jpg",
     category: "inspiration",
   },
   {
@@ -183,7 +183,7 @@ const blogPosts = [
     date: "September 16, 2020",
     excerpt:
       "It's 7:55 AM already, and I remembered I have a class at 8! Hurriedly, I woke up and switched on my laptop. It didn't take more than a minute to enter the meeting, and with the instructor beginning with",
-    image: "/dora/internship/assets/imag/blogs_im/studentdiary.jpg",
+    image: "../../assets/imag/blogs_im/studentdiary.jpg",
     category: "student-diary",
   },
   {
@@ -193,7 +193,7 @@ const blogPosts = [
     date: "September 16, 2020",
     excerpt:
       "Outreach Cell, IIT Kanpur brings you the next edition of the Distinguished Alumni Interview Series. We interview people who have contributed exceptionally to the society after graduating from IIT Kanpur and bring their inspiring life stories to you.",
-    image: "/dora/internship/assets/imag/blogs_im/da1.jpg",
+    image: "../../assets/imag/blogs_im/da1.jpg",
     category: "distinguished-alumni",
   },
   {
@@ -203,7 +203,7 @@ const blogPosts = [
     date: "September 3, 2025",
     excerpt:
       "This edition brings you the journey of Dr. Rathin Datta, Co-founder & Chairman at Vertec Biosolvents, Inc.",
-    image: "/dora/internship/assets/imag/blogs_im/da2.jpg",
+    image: "../../assets/imag/blogs_im/da2.jpg",
     category: "distinguished-alumni",
   },
   {
@@ -212,7 +212,7 @@ const blogPosts = [
     author: "Author 22",
     date: "August 11, 2020",
     excerpt: "Outreach Cell, IIT Kanpur brings you the 3rd edition of the Distinguished Alumni Interview Series.",
-    image: "/dora/internship/assets/imag/blogs_im/da3.png",
+    image: "../../assets/imag/blogs_im/da3.png",
     category: "distinguished-alumni",
   },
   {
@@ -222,7 +222,7 @@ const blogPosts = [
     date: "August 11, 2020",
     excerpt:
       "Outreach Cell, IIT Kanpur brings you the 2nd edition of the Distinguished Alumni Interview Series. We interview people who have contributed exceptionally to the society after graduating from IIT Kanpur and bring their inspiring life stories to you.",
-    image: "/dora/internship/assets/imag/blogs_im/da4.png",
+    image: "../../assets/imag/blogs_im/da4.png",
     category: "distinguished-alumni",
   },
   {
@@ -232,7 +232,7 @@ const blogPosts = [
     date: "August 11, 2020",
     excerpt:
       "This edition brings you the journey of Prof. Viney Aneja, Professor and Co-Directors of graduate programs in the department of Marine, Earth and Atmospheric Sciences (MEAS), North Carolina State University, Raleigh, NC, USA go.ncsu.edu/airquality",
-    image: "/dora/internship/assets/imag/blogs_im/da5.jpg",
+    image: "../../assets/imag/blogs_im/da5.jpg",
     category: "distinguished-alumni",
   },
   {
@@ -242,7 +242,7 @@ const blogPosts = [
     date: "August 11, 2020",
     excerpt:
       "This edition brings you the story of Mr.Udai Pratap Singh, who received the Distinguished Alumnus Award for Professional Excellence in 2009.",
-    image: "/dora/internship/assets/imag/blogs_im/da6.png",
+    image: "../../assets/imag/blogs_im/da6.png",
     category: "distinguished-alumni",
   },
   {
@@ -252,7 +252,7 @@ const blogPosts = [
     date: "September 14, 2021",
     excerpt:
       "Prof. Sanjit Sengupta got his B. Tech. in Aeronautical Engineering from IITK in 1980. He is now a Professor of Marketing at San Francisco State University, USA. In his spare time he likes to write poems, short stories, and plays",
-    image: "/dora/internship/assets/imag/blogs_im/travougue.jpg",
+    image: "../../assets/imag/blogs_im/travougue.jpg",
     category: "travelogue",
   },
   {
@@ -262,7 +262,7 @@ const blogPosts = [
     date: "September 3, 2021",
     excerpt:
       "Prof. Jayathi Y Murthy, a Distinguished Professor at UCLA, talks about the gender gap in IITK during her time, challenges faced by women in STEM, and experience of working in industry and academia.",
-    image: "/dora/internship/assets/imag/blogs_im/doh.png",
+    image: "../../assets/imag/blogs_im/doh.png",
     category: "destiny-her-own",
   },
   {
@@ -272,7 +272,7 @@ const blogPosts = [
     date: "June 2, 2021",
     excerpt:
       "Dr. Sudeshna Sinha is a professor in the Department of Physics, and also serves as the Deputy Director at the Indian Institute of Science Education and Research (IISER), Mohali, India. She completed her five-year integrated master's in Chemistry at IIT Kanpur in 1985.",
-    image: "/dora/internship/assets/imag/blogs_im/doh2.jpg",
+    image: "../../assets/imag/blogs_im/doh2.jpg",
     category: "destiny-her-own",
   },
   {
@@ -282,7 +282,7 @@ const blogPosts = [
     date: "May 28, 2025",
     excerpt:
       "Ms. Amrita Chowdhury, Co-founder of Gaia, is a business strategist, engineer, and an author. She talks about her fond memories of IITK, her switch from research to business school, gender gap, and much more.",
-    image: "/dora/internship/assets/imag/blogs_im/doh3.png",
+    image: "../../assets/imag/blogs_im/doh3.png",
     category: "destiny-her-own",
   },
   {
@@ -292,7 +292,7 @@ const blogPosts = [
     date: "May 17, 2021",
     excerpt:
       "Dr. Visweswariah is a Professor in the Dept. of Molecular Reproduction, Devleopment and Genetics at IISc, Bangalore. She talks about her IITK days, choosing research as a career option, gender gap in STEM, and much more.",
-    image: "/dora/internship/assets/imag/blogs_im/doh4.png",
+    image: "../../assets/imag/blogs_im/doh4.png",
     category: "destiny-her-own",
   },
   {
@@ -302,7 +302,7 @@ const blogPosts = [
     date: "May 26, 2025",
     excerpt:
       "I had a passion for Science from a very young age. When I was in Higher Secondary, I found Chemistry very intriguing as it plays an important role in our daily life. Thus, I opted for Chemistry as my major subject during my BSc.",
-    image: "/dora/internship/assets/imag/blogs_im/doh5.png",
+    image: "../../assets/imag/blogs_im/doh5.png",
     category: "destiny-her-own",
   },
   {
@@ -312,7 +312,7 @@ const blogPosts = [
     date: "July 20, 2021",
     excerpt:
       "Dr. Anil K. Rajvanshi reminisces about his seven years in IITK (1967 – 1974). In part -1 of the series, Dr. Rajvanshi gives a very vivid description of his first impressions of the Institute, talks about IBM 1620 in the Computer Centre, and the TV Centre that was run by Dr. M.M. Choudhari.",
-    image: "/dora/internship/assets/imag/blogs_im/memories1.jpeg",
+    image: "../../assets/imag/blogs_im/memories1.jpeg",
     category: "memories",
   },
   {
@@ -322,7 +322,7 @@ const blogPosts = [
     date: "January 21, 2025",
     excerpt:
       "Mr. Abhay Bhushan, recipient of the IITK Distinguished Alumnus Award 2006, shares his most priceless treasure - photographs from his IITK days.",
-    image: "/dora/internship/assets/imag/blogs_im/memories2.png",
+    image: "../../assets/imag/blogs_im/memories2.png",
     category: "memories",
   },
 ];
