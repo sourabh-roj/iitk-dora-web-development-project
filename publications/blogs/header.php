@@ -216,7 +216,7 @@
   </header>
 
   <div class="logo-circle" id="logoCircle">
-    <img src="/DORA/Internship/publications/blogs/logo(3).png" alt="IITK Logo">
+    <img src="logo(3).png" alt="IITK Logo">
   </div>
 
   <div class="header-spacer" id="headerSpacer"></div>
