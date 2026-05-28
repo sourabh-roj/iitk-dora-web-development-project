@@ -54,10 +54,6 @@ Implemented for Computer Science & Engineering Awards (CSEA), Distinguished Alum
 
 ## Project Structure
 
-Code output
-File generated successfully
-
-```text
 iitk/
 ├── alumni/
 │   ├── awards_honours.php
