@@ -1,4 +1,5 @@
-# README - IIT Kanpur DoRA Web Development Project
+# IIT Kanpur DoRA Web Development Project
+dokeriitk.onrender.com/
 
 ## Project Overview
 This project is the culmination of a two-month front-end web development internship at the Indian Institute of Technology Kanpur (IIT Kanpur), working specifically with the Office of Outreach Activities and the Development Office and Relations with Alumni (DoRA). The principal objective was to deliver maintainable, modular, and high-performance front-end solutions that seamlessly integrated with institutional branding and adhered to responsive design principles. 
@@ -7,8 +8,7 @@ This project is the culmination of a two-month front-end web development interns
 * **Prathmesh Thakur**
 * **Garv Nihore**
 * **Sourabh Roj**
-* *Mentorship*: Prof. Amey Karkare and Prof. Vimal Kumar
-
+* *Mentorship*: Prof. Amey Karkare 
 ## Modules Developed
 
 ### 1. DoRA Homepage
