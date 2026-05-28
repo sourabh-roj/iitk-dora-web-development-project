@@ -52,6 +52,54 @@ Implemented for Computer Science & Engineering Awards (CSEA), Distinguished Alum
 * **Performance Engineering**: Optimized pages by lazy loading offscreen elements, debouncing search inputs (at 300 ms), and throttling scroll handlers to prevent layout thrashing.
 * **WCAG 2.1 AA Compliance**: Validated high-contrast color schemes, inclusive semantic hierarchies, and explicit keyboard navigation focus.
 
+## 🚀 Performance Targets
+ 
+| Metric | Target |
+|--------|--------|
+| Lighthouse Performance | ≥ 90 |
+| Lighthouse Accessibility | ≥ 90 |
+| Lighthouse Best Practices | ≥ 90 |
+| Lighthouse SEO | ≥ 90 |
+| Initial Load Time | < 2 seconds |
+| Scroll / Animation | Sustained 60 fps |
+ 
+**Optimizations applied:** lazy loading, deferred scripts, GPU-accelerated transforms (`will-change: transform`), debounce/throttle on scroll and resize handlers, `DocumentFragment` batch DOM insertion.
+ 
+---
+
+## Cross-Browser Support
+ 
+Tested on Chrome, Firefox, Safari, and Edge via BrowserStack.  
+Notable fixes:
+- Safari `position: sticky` → added `-webkit-sticky` fallback
+- Firefox flexbox stretch under nested grids → explicit `min-height` + `flex-basis`
+- Animation flicker → `animation-delay` offsets + `will-change: transform`
+---
+ 
+##  Local Development Setup
+ 
+1. **Install [XAMPP](https://www.apachefriends.org/)** (Apache + PHP + MariaDB)
+2. Clone the repository into the `htdocs` directory:
+   ```bash
+   git clone <repo-url> htdocs/iitk-dora
+   ```
+3. Import the provided SQL dump via **phpMyAdmin**
+4. Start Apache and MySQL from the XAMPP control panel
+5. Visit `http://localhost/iitk-dora/` in your browser
+---
+ 
+##  Collaboration Workflow
+ 
+- **Feature branches** per component (e.g., `feature/csr-slideshow`, `feature/daa-filtering`)
+- **Merge requests** with peer code review
+- **GitLab CI** pipelines enforcing ESLint, Stylelint, and Jest before merge
+- Consistent local environments via XAMPP across Windows, macOS, and Linux
+---
+ 
+## 📄 License
+ 
+This project was developed as part of an academic internship at IIT Kanpur. All rights reserved by the Indian Institute of Technology Kanpur.
+
 ## Project Structure
 
 
