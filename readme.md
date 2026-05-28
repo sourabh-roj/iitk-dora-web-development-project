@@ -88,13 +88,6 @@ Notable fixes:
 5. Visit `http://localhost/iitk-dora/` in your browser
 ---
  
-##  Collaboration Workflow
- 
-- **Feature branches** per component (e.g., `feature/csr-slideshow`, `feature/daa-filtering`)
-- **Merge requests** with peer code review
-- **GitLab CI** pipelines enforcing ESLint, Stylelint, and Jest before merge
-- Consistent local environments via XAMPP across Windows, macOS, and Linux
----
  
 ## 📄 License
  
